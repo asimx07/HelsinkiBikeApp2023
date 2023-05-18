@@ -41,7 +41,7 @@ export const getJourneyValidator = () => {
   };
 };
 
-export const getJourneyModel = async (connection) => {
+export const getJourneyModel = async () => {
   console.log(`Returning Model Journey`);
-  return (await connection).model("Journey", JourneySchema);
+  return mongoose.model("Journey", JourneySchema);
 };

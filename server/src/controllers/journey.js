@@ -1,16 +1,28 @@
 import connectDatabase from "../config/database.js";
-import { getJourneyModel } from "../models/journey.js";
+import logger from "../lib/tools/logger.js";
+import * as JourneyService from "../services/journey.js";
 
-export const getAllJourneys = async (params) => {
-  const connection = connectDatabase();
+export const getAllJourneys = async (req, res) => {
+  try {
+    let journeys = await JourneyService.getAllJourneys({
+      page: req.query.page,
+      size: req.query.pageSize,
+    });
 
-  const Journey = getJourneyModel(connection);
-
-  let allJourneys = await Journey.find({});
-
-  return allJourneys;
+    res.send(journeys);
+  } catch (err) {
+    logger.error(err);
+    throw err;
+  }
 };
 
 export const getJourneyByID = async (req, res) => {
-  res.send("Okay");
+  try {
+    let journeyID = req.params.id;
+    let journey = await JourneyService.getJourneyByID({ id: journeyID });
+    res.send(journey);
+  } catch (err) {
+    logger.error(err);
+    throw err;
+  }
 };

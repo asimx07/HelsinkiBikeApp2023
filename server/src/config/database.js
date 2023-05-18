@@ -16,8 +16,9 @@ const connectDatabase = async () => {
           console.log(`Database Connection Failed with error ${error.message}`);
           process.exit(1);
         });
-        console.log(`Database connected with host ${dbConnection.connection.host}`);
-        return dbConnection;
+        console.log(
+          `Database connected with host ${dbConnection.connection.host}`
+        );
     } catch (error) {
         console.log(`Database Connection Failed with error ${error.message}`);
         process.exit(1);
