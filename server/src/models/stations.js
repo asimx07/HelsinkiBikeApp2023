@@ -78,7 +78,7 @@ export const getStationValidator = () => {
     },
   };
 };
-export const getStationModel = async (connection) => {
+export const getStationModel = async () => {
   console.log(`Returning Model Stations`);
-  return (await connection).model("Stations", StationSchema);
+  return mongoose.model("Stations", StationSchema);
 };

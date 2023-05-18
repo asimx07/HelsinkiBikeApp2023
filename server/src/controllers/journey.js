@@ -1,4 +1,3 @@
-import connectDatabase from "../config/database.js";
 import logger from "../lib/tools/logger.js";
 import * as JourneyService from "../services/journey.js";
 

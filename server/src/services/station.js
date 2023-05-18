@@ -1,15 +1,11 @@
-/**
- * Journey Service
- */
-
+import { getStationModel } from "../models/stations.js";
 import logger from "../lib/tools/logger.js";
-import { getJourneyModel } from "../models/journey.js";
 
-export const getAllJourneys = async (params) => {
+export const getAllStations = async (params) => {
   try {
     let page = params.page;
     let size = params.size;
-    let Journey = await getJourneyModel();
+    let Station = await getStationModel();
 
     if (page < 1 || isNaN(page)) {
       throw new Error("Invalid page number");
@@ -19,7 +15,7 @@ export const getAllJourneys = async (params) => {
       throw new Error("Invalid page size");
     }
 
-    const totalCount = await Journey.estimatedDocumentCount({});
+    const totalCount = await Station.estimatedDocumentCount({});
 
     const totalPages = Math.ceil(totalCount / size);
 
@@ -30,24 +26,24 @@ export const getAllJourneys = async (params) => {
     const count = (page - 1) * size;
     console.log(page, size, count);
 
-    let journeys = await Journey.find({}).skip(count).limit(size).exec();
+    let stations = await Station.find({}).skip(count).limit(size).exec();
 
-    return journeys;
+    return stations;
   } catch (err) {
     logger.error(err);
   }
 };
 
-export const getJourneyByID = async (params) => {
+export const getStationByID = async (params) => {
   try {
     let id = params.id;
-    let Journey = await getJourneyModel();
 
-    let journey = await Journey.find({ _id: id });
+    let Station = await getStationModel();
 
-    return journey;
+    let station = await Station.find({ ID: id }).exec();
+
+    return station;
   } catch (err) {
     logger.error(err);
   }
 };
-
