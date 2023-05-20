@@ -6,11 +6,13 @@ import logger from "./lib/tools/logger.js";
 import { getStationModel } from "./models/stations.js";
 import { insertJourneys, insertStations } from "./lib/tools/insert.js";
 import { getFilesFromDirectory } from "./lib/tools/utils.js";
+import cors from "cors";
 import router from "./routes.js";
 dotenv.config();
 const PORT = process.env.SERVER_PORT;
 const app = express();
-
+app.use(cors("*"));
+app.use(express.json());
 app.listen(PORT, logger.info(`Server listening at Port ${PORT}`));
 
 app.use("", router);

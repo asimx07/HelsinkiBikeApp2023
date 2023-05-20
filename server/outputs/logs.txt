@@ -1,0 +1,102 @@
+2023-05-17T23:29:29.714Z info: Server listening at Port 3000
+2023-05-17T23:31:50.107Z info: Server listening at Port 3000
+2023-05-17T23:54:52.481Z info: Server listening at Port 3000
+2023-05-18T00:00:41.507Z info: Server listening at Port 3000
+2023-05-18T00:01:00.595Z error: JourneyService.getJourneyByID is not a function
+2023-05-18T00:01:56.933Z info: Server listening at Port 3000
+2023-05-18T00:04:40.017Z info: Server listening at Port 3000
+2023-05-18T00:05:09.164Z info: Server listening at Port 3000
+2023-05-18T00:05:23.604Z info: Server listening at Port 3000
+2023-05-18T00:08:01.819Z info: Server listening at Port 3000
+2023-05-18T00:08:12.771Z info: Server listening at Port 3000
+2023-05-18T00:16:44.435Z info: Server listening at Port 3000
+2023-05-18T00:18:19.756Z info: Server listening at Port 3000
+2023-05-18T00:18:56.546Z info: Server listening at Port 3000
+2023-05-18T00:19:08.444Z error: Cast to ObjectId failed for value "list" (type string) at path "_id" for model "Journey"
+2023-05-18T00:19:55.686Z info: Server listening at Port 3000
+2023-05-18T00:19:57.105Z error: Cast to ObjectId failed for value "list" (type string) at path "_id" for model "Journey"
+2023-05-18T00:20:45.244Z info: Server listening at Port 3000
+2023-05-18T00:20:46.530Z error: Cast to ObjectId failed for value "list" (type string) at path "_id" for model "Journey"
+2023-05-18T00:21:47.897Z info: Server listening at Port 3000
+2023-05-18T00:21:51.272Z error: Cast to ObjectId failed for value "list" (type string) at path "_id" for model "Journey"
+2023-05-18T00:22:03.369Z error: Cast to ObjectId failed for value "list" (type string) at path "_id" for model "Journey"
+2023-05-18T00:22:13.500Z error: Cast to ObjectId failed for value "list" (type string) at path "_id" for model "Journey"
+2023-05-18T00:22:49.112Z info: Server listening at Port 3000
+2023-05-18T00:22:52.341Z error: Cast to ObjectId failed for value "list" (type string) at path "_id" for model "Journey"
+2023-05-18T00:23:10.824Z info: Server listening at Port 3000
+2023-05-18T00:23:14.633Z error: req is not defined
+2023-05-18T00:23:39.018Z info: Server listening at Port 3000
+2023-05-18T00:24:46.902Z error: BSON field 'skip' value must be >= 0, actual value '-10'
+2023-05-18T00:26:27.985Z info: Server listening at Port 3000
+2023-05-18T00:26:30.258Z error: pageNumber is not defined
+2023-05-18T00:27:54.662Z info: Server listening at Port 3000
+2023-05-18T00:28:56.419Z info: Server listening at Port 3000
+2023-05-18T00:28:58.436Z error: BSON field 'skip' value must be >= 0, actual value '-10'
+2023-05-18T00:29:04.707Z error: BSON field 'skip' value must be >= 0, actual value '-10'
+2023-05-18T00:31:47.368Z info: Server listening at Port 3000
+2023-05-18T00:37:04.129Z info: Server listening at Port 3000
+2023-05-18T00:37:23.872Z info: Server listening at Port 3000
+2023-05-18T00:37:29.177Z error: Invalid page number
+2023-05-18T00:37:42.380Z error: Invalid page size
+2023-05-18T00:37:49.187Z error: Invalid page number
+2023-05-18T00:38:03.876Z error: Invalid page number
+2023-05-18T00:38:16.870Z error: Invalid page size
+2023-05-18T00:38:23.806Z error: Invalid page size
+2023-05-18T00:38:31.971Z error: Invalid page size
+2023-05-18T00:38:47.199Z error: Cannot access 'Journey' before initialization
+2023-05-18T00:39:03.769Z info: Server listening at Port 3000
+2023-05-18T00:46:05.693Z info: Server listening at Port 3000
+2023-05-18T00:46:31.619Z info: Server listening at Port 3000
+2023-05-18T00:47:23.022Z info: Server listening at Port 3000
+2023-05-18T00:47:49.649Z info: Server listening at Port 3000
+2023-05-18T00:48:08.623Z info: Server listening at Port 3000
+2023-05-18T00:49:03.207Z info: Server listening at Port 3000
+2023-05-18T00:49:17.627Z info: Server listening at Port 3000
+2023-05-18T00:49:35.679Z info: Server listening at Port 3000
+2023-05-18T00:50:05.628Z error: Page not found
+2023-05-18T00:50:09.887Z error: Invalid page number
+2023-05-18T00:50:16.829Z error: Invalid page number
+2023-05-18T00:54:14.842Z info: Server listening at Port 3000
+2023-05-18T16:20:27.853Z info: Server listening at Port 3000
+2023-05-18T16:20:30.572Z error: StationService.getAllJourneys is not a function
+2023-05-18T16:20:46.720Z info: Server listening at Port 3000
+2023-05-18T16:20:49.543Z error: logger is not defined
+2023-05-18T16:21:08.644Z info: Server listening at Port 3000
+2023-05-18T16:21:12.033Z error: Cannot read properties of undefined (reading 'model')
+2023-05-18T16:21:55.799Z info: Server listening at Port 3000
+2023-05-18T16:22:12.275Z error: Invalid page number
+2023-05-18T16:22:37.119Z error: Page not found
+2023-05-18T16:22:46.161Z error: Page not found
+2023-05-18T16:24:22.520Z error: Page not found
+2023-05-18T16:24:26.789Z error: Page not found
+2023-05-18T16:28:50.962Z info: Server listening at Port 3000
+2023-05-18T16:29:17.345Z info: Server listening at Port 3000
+2023-05-18T16:34:43.095Z info: Server listening at Port 3000
+2023-05-18T16:35:16.569Z error: Cast to ObjectId failed for value "10" (type string) at path "_id" for model "Stations"
+2023-05-18T16:35:40.183Z error: Cast to ObjectId failed for value "523" (type string) at path "_id" for model "Stations"
+2023-05-18T16:35:50.755Z info: Server listening at Port 3000
+2023-05-18T16:36:29.317Z info: Server listening at Port 3000
+2023-05-20T00:56:30.686Z info: Server listening at Port 3000
+2023-05-20T01:02:02.090Z error: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "Journey"
+2023-05-20T01:02:38.604Z error: Invalid page number
+2023-05-20T01:02:46.892Z error: Invalid page size
+2023-05-20T01:09:31.239Z info: Server listening at Port 3000
+2023-05-20T01:09:39.121Z error: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Journey"
+2023-05-20T01:09:39.141Z error: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Journey"
+2023-05-20T01:10:11.963Z info: Server listening at Port 3000
+2023-05-20T01:10:19.880Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:10:22.709Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:10:22.720Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:10:42.131Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:12:31.815Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:12:34.232Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:12:34.263Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:13:18.947Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:13:18.984Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:13:37.343Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:14:47.660Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:14:47.675Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:16:00.700Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:16:40.345Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:17:07.857Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
+2023-05-20T01:17:12.999Z error: Cast to ObjectId failed for value "page=1&pageSize=10" (type string) at path "_id" for model "Journey"
