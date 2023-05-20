@@ -1,0 +1,28 @@
+.journeys-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .journeys-table th,
+  .journeys-table td {
+    border: 1px solid rgb(207, 191, 191);
+    padding: 8px;
+  }
+  
+  .journeys-table th {
+    background-color: #000000;
+    color : #FFFFFF
+  }
+  .journeys-container {
+    margin-bottom: 20px;
+  }
+  
+  .pagination-container {
+    margin-top: 20px;
+  }
+  
+  .page-button{
+    margin-right: 10px;
+    margin-left : 10px;
+  }
+  

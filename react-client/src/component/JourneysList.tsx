@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getJourneys } from "../api/getJourneys";
+import "../styles/JourneysList.css";
 export const JourneysList = () => {
-  const [journeys, setJourneys] = useState<
+  const [allJourneys, setJourneys] = useState<
     {
       durationInSeconds: number;
       returnStationName: string;
@@ -11,7 +12,9 @@ export const JourneysList = () => {
     }[]
   >([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 10;
+  const [pageCount, setTotalPages] = useState(1);
+  const pageSize = 30;
+
   useEffect(() => {
     async function fetchJourneys() {
       const params = new URLSearchParams({
@@ -19,13 +22,15 @@ export const JourneysList = () => {
         pageSize: pageSize.toString(),
       });
       const response = await getJourneys(params);
-      const newJourneys = await response.json();
+      const { journeys: newJourneys, totalPages: totalPagesCount } =
+        await response.json();
+      setTotalPages(totalPagesCount);
       setJourneys(newJourneys);
       console.log(newJourneys);
     }
 
     fetchJourneys();
-  }, [currentPage]);
+  }, [currentPage, pageCount]);
   //const totalPages = Math.ceil(journeys.length / pageSize);
 
   const handlePreviousPage = () => {
@@ -33,14 +38,14 @@ export const JourneysList = () => {
   };
 
   const handleNextPage = () => {
-    setCurrentPage((prevPage) => Math.min(prevPage + 1, 100));
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, pageCount));
     console.log("next");
   };
   return (
-    <div>
-      <table>
+    <div className="journeys-container">
+      <table className="journeys-table">
         <thead>
-          <tr>
+          <tr justify-content="space-between">
             <th>Departure Station Name</th>
             <th>Return Station Name</th>
             <th>Duration (in minutes)</th>
@@ -48,7 +53,7 @@ export const JourneysList = () => {
           </tr>
         </thead>
         <tbody>
-          {journeys.map((journey) => (
+          {allJourneys.map((journey) => (
             <tr key={journey._id}>
               <td>{journey.departureStationName}</td>
               <td>{journey.returnStationName}</td>
@@ -58,14 +63,23 @@ export const JourneysList = () => {
           ))}
         </tbody>
       </table>
-      <div>
-        <button onClick={handlePreviousPage} disabled={currentPage === 1}>
+      <div className="pagination-container">
+        <button
+          className="page-button"
+          onClick={handlePreviousPage}
+          disabled={currentPage === 1}
+        >
           Previous
         </button>
         <span>{currentPage}</span>
-        <button onClick={handleNextPage} disabled={currentPage === 100}>
+        <button
+          className="page-button"
+          onClick={handleNextPage}
+          disabled={currentPage === pageCount}
+        >
           Next
         </button>
+        <div>{pageCount}</div>
       </div>
     </div>
   );
