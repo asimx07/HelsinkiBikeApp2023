@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getJourneys } from "../api/getJourneys";
-import "../styles/JourneysList.css";
-import Button from "@mui/material/Button";
+import { getStations } from "../api/getStations";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -10,14 +8,10 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
-import TableSortLabel from "@mui/material/TableSortLabel";
+import theme from "../styles/theme";
 
 interface Column {
-  id:
-    | "departureStationName"
-    | "returnStationName"
-    | "durationInSeconds"
-    | "coveredDistanceInMeters";
+  id: "ID" | "Name" | "Adress" | "Kaupunki" | "Operaattor" | "Kapasiteet";
   label: string;
   minWidth?: number;
   align?: "right";
@@ -26,53 +20,61 @@ interface Column {
 
 const columns: readonly Column[] = [
   {
-    id: "departureStationName",
-    label: "Departure Station",
+    id: "ID",
+    label: "Station ID",
     minWidth: 200,
   },
-  { id: "returnStationName", label: "Return Station", minWidth: 200 },
+  { id: "Name", label: "Station Name", minWidth: 200 },
   {
-    id: "durationInSeconds",
-    label: "Journey Duration (Minutes)",
+    id: "Adress",
+    label: "Station Address",
     minWidth: 200,
-    format: (value: number) => (value / 60).toFixed(2),
   },
   {
-    id: "coveredDistanceInMeters",
-    label: "Journey Distance (KMs)",
+    id: "Kaupunki",
+    label: "City",
     minWidth: 200,
-    format: (value: number) => (value / 1000).toFixed(2),
+  },
+  {
+    id: "Operaattor",
+    label: "Operator",
+    minWidth: 200,
+  },
+  {
+    id: "Kapasiteet",
+    label: "Capacity",
+    minWidth: 200,
   },
 ];
 
-export const JourneysList = () => {
-  const [allJourneys, setJourneys] = useState<any[]>([]);
+export const StationList = () => {
+  const [allStations, setStations] = useState<any[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [pageSize, setPageSize] = useState(10); // Dynamic page size
 
   useEffect(() => {
-    async function fetchJourneys() {
+    async function fetchStations() {
       const params = new URLSearchParams({
         page: currentPage.toString(),
         pageSize: pageSize.toString(),
       });
-      const response = await getJourneys(params);
-      const { journeys: newJourneys, totalPages: totalPagesCount } =
+      const response = await getStations(params);
+      const { stations: newStations, totalPages: totalPagesCount } =
         await response.json();
 
       setTotalPages(totalPagesCount);
-      setJourneys(newJourneys);
-      console.log(newJourneys);
+      setStations(newStations);
+      console.log(newStations);
     }
 
-    fetchJourneys();
+    fetchStations();
   }, [currentPage, pageSize]);
   const handlePageSizeChange = (
     event: React.ChangeEvent<{ value: string }>
   ) => {
     const newPageSize = parseInt(event.target.value, 10);
-    const newTotalPages = Math.ceil(allJourneys.length / newPageSize);
+    const newTotalPages = Math.ceil(allStations.length / newPageSize);
 
     setPageSize(newPageSize);
     setTotalPages(newTotalPages);
@@ -81,7 +83,7 @@ export const JourneysList = () => {
 
   return (
     <>
-      <Paper sx={{ width: "100%", overflow: "hidden" }}>
+      <Paper className="table-paper">
         <TableContainer sx={{ maxHeight: 440 }}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
@@ -98,7 +100,7 @@ export const JourneysList = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {allJourneys.map((row) => (
+              {allStations.map((row) => (
                 <TableRow hover role="checkbox" tabIndex={-1} key={row._id}>
                   {columns.map((column) => {
                     const value = row[column.id];

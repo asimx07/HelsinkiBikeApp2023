@@ -18,8 +18,10 @@ export const getAllJourneys = async (params) => {
     if (size < 1 || isNaN(size)) {
       throw new Error("Invalid page size");
     }
-
     const totalCount = await Journey.estimatedDocumentCount({});
+    if (size === -1) {
+      size = totalCount;
+    }
 
     const totalPages = Math.ceil(totalCount / size);
 
@@ -32,7 +34,7 @@ export const getAllJourneys = async (params) => {
 
     let journeys = await Journey.find({}).skip(count).limit(size).exec();
 
-    return journeys;
+    return { journeys: journeys, totalPages: totalPages };
   } catch (err) {
     logger.error(err);
   }

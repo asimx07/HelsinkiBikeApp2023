@@ -28,7 +28,7 @@ export const getAllStations = async (params) => {
 
     let stations = await Station.find({}).skip(count).limit(size).exec();
 
-    return stations;
+    return { stations: stations, totalPages: totalPages };
   } catch (err) {
     logger.error(err);
   }
