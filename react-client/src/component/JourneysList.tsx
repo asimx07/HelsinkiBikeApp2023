@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getJourneys } from "../api/getJourneys";
 import "../styles/JourneysList.css";
-import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -10,8 +9,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
-import TableSortLabel from "@mui/material/TableSortLabel";
-
+import Header from "./Header";
 interface Column {
   id:
     | "departureStationName"
