@@ -5,9 +5,15 @@ const { Schema } = mongoose;
 const JourneySchema = new Schema({
   departure: Date,
   return: Date,
-  departureStationID: Number,
+  departureStationID: {
+    type: Number,
+    index: true,
+  },
   departureStationName: String,
-  returnStationId: Number,
+  returnStationId: {
+    type: Number,
+    index: true,
+  },
   returnStationName: String,
   coveredDistanceInMeters: Number,
   durationInSeconds: Number,

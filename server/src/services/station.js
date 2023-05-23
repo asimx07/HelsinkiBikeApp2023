@@ -1,4 +1,5 @@
 import { getStationModel } from "../models/stations.js";
+import { getJourneyModel } from "../models/journey.js";
 import logger from "../lib/tools/logger.js";
 
 export const getAllStations = async (params) => {
@@ -6,7 +7,7 @@ export const getAllStations = async (params) => {
     let page = params.page;
     let size = params.size;
     let Station = await getStationModel();
-
+    let Journey = await getJourneyModel();
     if (page < 1 || isNaN(page)) {
       throw new Error("Invalid page number");
     }
@@ -27,8 +28,22 @@ export const getAllStations = async (params) => {
     console.log(page, size, count);
 
     let stations = await Station.find({}).skip(count).limit(size).exec();
-
-    return { stations: stations, totalPages: totalPages };
+    const stationObjects = stations.map((stations) => stations.toObject());
+    for (let station of stationObjects) {
+      let departureCount = await Journey.countDocuments({
+        departureStationID: station.ID,
+      });
+      console.log(station);
+      station.totalDepartureCount = departureCount;
+      let returnCount = await Journey.countDocuments({
+        returnStationId: station.ID,
+      });
+      station.totalReturnCount = returnCount;
+    }
+    return {
+      stations: stationObjects,
+      totalPages: totalPages,
+    };
   } catch (err) {
     logger.error(err);
   }

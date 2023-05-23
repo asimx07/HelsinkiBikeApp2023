@@ -1,5 +1,5 @@
 import { config } from "dotenv";
-
+import logger from "./logger.js";
 config();
 
 import { getCsvToJson, getFilesFromDirectory } from "./utils.js";
@@ -9,7 +9,21 @@ import pkg from "lodash";
 import { getJourneyValidator } from "../../models/journey.js";
 import { getStationValidator } from "../../models/stations.js";
 
+const isSeedData = async (collection) => {
+  let totalCount = await collection.estimatedDocumentCount({});
+
+  if (totalCount > 0) {
+    return true;
+  }
+  return false;
+};
+
 export const insertJourneys = async (collection) => {
+  if (await isSeedData(collection)) {
+    logger.info("There is already data in Journey Collection");
+    return;
+  }
+
   let { chunk: _chunk } = pkg;
   let CHUNK = 300000;
   let PARALLEL_EXECUTIONS = 6;
@@ -93,12 +107,15 @@ export const insertJourneys = async (collection) => {
 };
 
 export const insertStations = async (collection) => {
+  if (await isSeedData(collection)) {
+    logger.info("There is already data in Station Collection");
+    return;
+  }
+
   let stationValidator = getStationValidator();
   let col = collection;
   let stationFilePaths = getFilesFromDirectory("./data/stations");
   let BYTE_IN_MB = 0.00000095367432;
-  let insertedDocs = 0;
-  let skippedDocs = 0;
 
   for (let file of stationFilePaths) {
     let jsonArray = await getCsvToJson(file, "stations");

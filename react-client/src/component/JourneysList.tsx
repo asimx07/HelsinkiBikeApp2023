@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { getJourneys } from "../api/getJourneys";
-import "../styles/JourneysList.css";
 import Header from "./Header";
 import {
   Paper,
@@ -14,54 +13,12 @@ import {
   Container,
   Typography,
   CssBaseline,
+  IconButton,
 } from "@mui/material";
-
+import { ArrowUpward, ArrowDownward } from "@mui/icons-material";
+import { styles } from "../styles/tableStyles";
 const APP_URL = import.meta.env.VITE_PUBLIC_URL;
-
-const styles = {
-  root: {
-    minHeight: "100vh",
-    minWidth: "100vw",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${
-      APP_URL + "/src/assets/bg.jpg"
-    })`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "top-right",
-    display: "flex",
-    textAlign: "center",
-  },
-  headerContainer: {
-    position: "absolute",
-    top: 0,
-    width: "100%",
-    background: "rgba(0,0,0,0)",
-  },
-  tableCell: {
-    backgroundColor: "#000",
-    color: "#fff",
-  },
-  tableCellText: {
-    color: "#fff",
-    fontSize: "1rem",
-  },
-  paper: {
-    marginTop: "100px",
-    width: "100%",
-    overflow: "auto",
-    backgroundColor: "#0000006e",
-  },
-  tableContainer: {
-    maxHeight: 450,
-    display: "flex",
-  },
-  tableFooter: {
-    color: "#fff",
-    fontSize: "1rem",
-  },
-};
+import { useJourneysList } from "../hooks/useJourneys";
 
 interface Column {
   id:
@@ -73,6 +30,7 @@ interface Column {
   minWidth?: number;
   align?: "right";
   format?: (value: number) => string;
+  sortable?: boolean;
 }
 
 const columns: readonly Column[] = [
@@ -87,61 +45,46 @@ const columns: readonly Column[] = [
     label: "Journey Duration (Minutes)",
     minWidth: 100,
     format: (value: number) => (value / 60).toFixed(2),
+    sortable: true,
   },
   {
     id: "coveredDistanceInMeters",
     label: "Journey Distance (KMs)",
     minWidth: 100,
     format: (value: number) => (value / 1000).toFixed(2),
+    sortable: true,
   },
 ];
 
 export const JourneysList = () => {
-  const [allJourneys, setJourneys] = useState<any[]>([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
-  const [pageSize, setPageSize] = useState(10); // Dynamic page size
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    async function fetchJourneys() {
-      try {
-        const params = new URLSearchParams({
-          page: currentPage.toString(),
-          pageSize: pageSize.toString(),
-        });
-        const response = await getJourneys(params);
-
-        if (!response.ok) {
-          throw new Error("Failed to fetch journeys");
-        }
-
-        const { journeys: newJourneys, totalPages: totalPagesCount } =
-          await response.json();
-
-        setTotalPages(totalPagesCount);
-        setJourneys(newJourneys);
-        setError(null); // Reset error if fetching was successful
-        console.log(newJourneys);
-      } catch (error) {
-        // Handle the error
-        console.error("Error fetching journeys:", error);
-        setError("Failed to fetch journeys");
-      }
+  const {
+    sortColumn,
+    sortDirection,
+    allJourneys,
+    currentPage,
+    totalPages,
+    pageSize,
+    error,
+    handleSort,
+    sortedJourneys,
+    handlePageSizeChange,
+    setCurrentPage,
+  } = useJourneysList();
+  const renderSortIcon = (columnId: string) => {
+    // Check if the column is sortable
+    const sortableColumn = columns.find(
+      (column) => column.id === columnId && column.sortable
+    );
+    if (sortableColumn) {
+      // Render the sort icon based on the sort direction
+      return sortDirection === "asc" ? (
+        <ArrowUpward fontSize="small" />
+      ) : (
+        <ArrowDownward fontSize="small" />
+      );
     }
 
-    fetchJourneys();
-  }, [currentPage, pageSize]);
-
-  const handlePageSizeChange = (
-    event: React.ChangeEvent<{ value: string }>
-  ) => {
-    const newPageSize = parseInt(event.target.value, 10);
-    const newTotalPages = Math.ceil(allJourneys.length / newPageSize);
-
-    setPageSize(newPageSize);
-    setTotalPages(newTotalPages);
-    setCurrentPage(1);
+    return null;
   };
 
   if (error) {
@@ -159,7 +102,7 @@ export const JourneysList = () => {
             }}
           >
             <Typography
-              variant="h5"
+              variant="h"
               align="center"
               style={{ color: "#fff", padding: "50px" }}
             >
@@ -190,14 +133,24 @@ export const JourneysList = () => {
                         minWidth: column.minWidth,
                         ...styles.tableCell,
                       }}
+                      onClick={() => column.sortable && handleSort(column.id)}
                     >
                       {column.label}
+                      {column.sortable && (
+                        <IconButton
+                          size="small"
+                          disabled={!column.sortable}
+                          color="inherit"
+                        >
+                          {renderSortIcon(column.id)}
+                        </IconButton>
+                      )}
                     </TableCell>
                   ))}
                 </TableRow>
               </TableHead>
               <TableBody>
-                {allJourneys.map((row) => (
+                {sortedJourneys.map((row) => (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row._id}>
                     {columns.map((column) => {
                       const value = row[column.id];
