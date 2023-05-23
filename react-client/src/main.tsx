@@ -5,7 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { JourneysList } from "./component/JourneysList";
-import { StationList } from "./component/StationList";
+import { StationsList } from "./component/StationsList.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/stations",
-    element: (<StationList />) as React.ReactNode,
+    element: (<StationsList />) as React.ReactNode,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
