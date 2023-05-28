@@ -1,6 +1,6 @@
 export const getJourneys = async (params: any) => {
   try {
-    const response = await fetch(`http://localhost:3000/journey?${params}`, {
+    const response = await fetch(`http://localhost:3000/journeys?${params}`, {
       method: "GET",
       headers: {
         "Content-type": "application/json",

@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { SingleStation } from "./component/SingleStation.tsx";
 import { JourneysList } from "./component/JourneysList";
 import { StationsList } from "./component/StationsList.tsx";
-
+import StationForm from "./component/CreateStation.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/station/:id",
     element: (<SingleStation />) as React.ReactNode,
+  },
+  {
+    path: "/station/create",
+    element: <StationForm />,
   },
   {
     path: "404",

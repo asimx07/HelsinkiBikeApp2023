@@ -29,7 +29,6 @@ export const useStationsList = () => {
         setTotalPages(totalPagesCount);
         setStations(newStations);
         setError(null);
-        console.log(newStations);
       } catch (error) {
         console.error("Error fetching stations:", error);
         setError("Failed to fetch stations");
@@ -75,10 +74,8 @@ export const useStationsList = () => {
     event: React.ChangeEvent<{ value: string }>
   ) => {
     const newPageSize = parseInt(event.target.value, 10);
-    const newTotalPages = Math.ceil(allStations.length / newPageSize);
 
     setPageSize(newPageSize);
-    setTotalPages(newTotalPages);
     setCurrentPage(1);
   };
 

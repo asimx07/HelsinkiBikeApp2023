@@ -123,7 +123,7 @@ export const StationsList = () => {
     <>
       <CssBaseline />
 
-      <Container style={styles.root}>
+      <Container sx={styles.root}>
         <Header />
 
         <Paper sx={styles.paper}>
@@ -163,7 +163,7 @@ export const StationsList = () => {
                     tabIndex={-1}
                     key={row._id}
                     component={Link}
-                    to={`${APP_URL}/station/${row._id}`}
+                    to={`${APP_URL}/station/${row.ID}`}
                   >
                     {columns.map((column) => {
                       const value = row[column.id];
@@ -185,10 +185,11 @@ export const StationsList = () => {
             </Table>
           </TableContainer>
           <TablePagination
+            data-testid="rows-per-page"
             style={styles.tableFooter}
-            rowsPerPageOptions={[5, 10, 25, 50]}
+            rowsPerPageOptions={[5, 10, 15, 50]}
             component="div"
-            count={pageSize * totalPages}
+            count={totalPages}
             rowsPerPage={pageSize}
             page={currentPage - 1}
             onPageChange={(event: any, newPage: number) =>

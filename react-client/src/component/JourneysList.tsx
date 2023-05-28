@@ -172,10 +172,11 @@ export const JourneysList = () => {
             </Table>
           </TableContainer>
           <TablePagination
+            data-testid="rows-per-page"
             style={styles.tableFooter}
             rowsPerPageOptions={[5, 10, 25, 50]}
             component="div"
-            count={pageSize * totalPages}
+            count={totalPages}
             rowsPerPage={pageSize}
             page={currentPage - 1}
             onPageChange={(event: any, newPage: number) =>

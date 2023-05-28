@@ -20,7 +20,7 @@ export const useJourneysList = () => {
         const response = await getJourneys(params);
 
         if (!response.ok) {
-          throw new Error("Failed to fetch journeys ");
+          throw new Error("Failed to fetch journeys");
         }
 
         const { journeys: newJourneys, totalPages: totalPagesCount } =
@@ -31,8 +31,8 @@ export const useJourneysList = () => {
         setError(null);
         console.log(newJourneys);
       } catch (error) {
-        console.error("Error fetching journeys  :", error);
-        setError("Failed to fetch journeys  ");
+        console.error("Error fetching journeys:", error);
+        setError("Failed to fetch journeys");
       }
     }
 
@@ -75,10 +75,10 @@ export const useJourneysList = () => {
     event: React.ChangeEvent<{ value: string }>
   ) => {
     const newPageSize = parseInt(event.target.value, 10);
-    const newTotalPages = Math.ceil(allJourneys.length / newPageSize);
+    //const newTotalPages = Math.ceil(totalPages / newPageSize);
 
     setPageSize(newPageSize);
-    setTotalPages(newTotalPages);
+    //setTotalPages(newTotalPages);
     setCurrentPage(1);
   };
 

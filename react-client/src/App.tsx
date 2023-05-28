@@ -97,10 +97,10 @@ function App() {
         </Collapse>
       </Paper>
       <Paper style={styles.journeyCardContainer}>
-        <Box style={{ margin: "20px" }}>
+        <Box style={{ margin: "20px" }} data-testid="journey-card">
           <JourneyCard />
         </Box>
-        <Box style={{ margin: "20px" }}>
+        <Box style={{ margin: "20px" }} data-testid="station-card">
           <StationCard />
         </Box>
       </Paper>
