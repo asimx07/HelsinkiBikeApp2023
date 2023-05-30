@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-import { SingleStation } from "./SingleStation.tsx";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import { styles } from "../styles/tableStyles";
@@ -19,6 +17,9 @@ import {
 } from "@mui/material";
 import { ArrowUpward, ArrowDownward } from "@mui/icons-material";
 import { useStationsList } from "../hooks/useStations.ts";
+import { useNavigate } from "react-router-dom";
+
+import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 
 const APP_URL = import.meta.env.VITE_PUBLIC_URL;
 
@@ -63,10 +64,10 @@ const columns: readonly Column[] = [
 ];
 
 export const StationsList = () => {
+  const navigate = useNavigate();
+
   const {
-    sortColumn,
     sortDirection,
-    allStations,
     currentPage,
     totalPages,
     pageSize,
@@ -76,6 +77,9 @@ export const StationsList = () => {
     handlePageSizeChange,
     setCurrentPage,
   } = useStationsList();
+  const handleAddStation = () => {
+    navigate("/station/create");
+  };
 
   const renderSortIcon = (columnId: string) => {
     // Check if the column is sortable
@@ -192,10 +196,17 @@ export const StationsList = () => {
             count={totalPages}
             rowsPerPage={pageSize}
             page={currentPage - 1}
-            onPageChange={(event: any, newPage: number) =>
+            onPageChange={(_event: any, newPage: number) =>
               setCurrentPage(newPage + 1)
             }
             onRowsPerPageChange={handlePageSizeChange}
+            ActionsComponent={() => (
+              <IconButton onClick={handleAddStation}>
+                <AddCircleOutlineOutlinedIcon
+                  sx={{ color: "#fff", fontSize: "2rem" }}
+                />
+              </IconButton>
+            )}
           />
         </Paper>
       </Container>

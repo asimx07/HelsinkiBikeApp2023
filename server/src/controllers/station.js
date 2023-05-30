@@ -26,3 +26,14 @@ export const getStationByID = async (req, res) => {
     throw err;
   }
 };
+export const createStation = async (req, res) => {
+  try {
+    let stationData = req.body;
+    console.log(req.body);
+    let station = await StationService.createStation(stationData);
+    res.send(station);
+  } catch (error) {
+    logger.error(err);
+    throw err;
+  }
+};

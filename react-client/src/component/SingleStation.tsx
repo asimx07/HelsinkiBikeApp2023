@@ -1,6 +1,4 @@
-import React from "react";
 import { useSingleStation } from "../hooks/useSingleStation.ts";
-import { useParams } from "react-router-dom";
 
 import {
   CssBaseline,

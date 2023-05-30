@@ -1,6 +1,19 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { TextField, Button } from "@mui/material";
+import {
+  Typography,
+  TextField,
+  Button,
+  Box,
+  Card,
+  Grid,
+  CssBaseline,
+  Paper,
+} from "@mui/material";
+import Header from "./Header";
+import styles from "../styles/formStyles.tsx";
+import { createStation } from "../api/createStation.tsx";
+import { useNavigate } from "react-router-dom";
 
 interface StationFormData {
   FID: number;
@@ -19,6 +32,7 @@ interface StationFormData {
 }
 
 const StationForm: React.FC = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -29,137 +43,240 @@ const StationForm: React.FC = () => {
     createStation(data)
       .then((response) => {
         if (response.statusCode === 201) {
-          // Station created successfully
           console.log(response.message);
-          // Do something else, e.g., show a success message to the user
+
+          navigate("/stations");
         } else {
-          // Handle error response, e.g., display validation errors
           console.log(response.errors);
         }
       })
       .catch((error) => {
-        // Handle API call error
         console.error(error);
-        // Display an error message to the user
       });
-  };
-
-  const createStation = async (params: StationFormData) => {
-    try {
-      const response = await fetch(`http://localhost:3000/station`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(params),
-      });
-
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error(error);
-      return { statusCode: 500, error: "Failed to save Station" };
-    }
   };
 
   return (
-    <form onSubmit={handleSubmit(handleFormSubmit)}>
-      <TextField
-        label="FID"
-        fullWidth
-        {...register("FID", { required: "FID is required" })}
-        error={!!errors.FID}
-        helperText={errors.FID?.message}
-      />
-      <TextField
-        label="ID"
-        fullWidth
-        {...register("ID", { required: "ID is required" })}
-        error={!!errors.ID}
-        helperText={errors.ID?.message}
-      />
-      <TextField
-        label="Nimi"
-        fullWidth
-        {...register("Nimi", { required: "Nimi is required" })}
-        error={!!errors.Nimi}
-        helperText={errors.Nimi?.message}
-      />
-      <TextField
-        label="Namn"
-        fullWidth
-        {...register("Namn", { required: "Namn is required" })}
-        error={!!errors.Namn}
-        helperText={errors.Namn?.message}
-      />
-      <TextField
-        label="Name"
-        fullWidth
-        {...register("Name", { required: "Name is required" })}
-        error={!!errors.Name}
-        helperText={errors.Name?.message}
-      />
-      <TextField
-        label="Osoite"
-        fullWidth
-        {...register("Osoite", { required: "Osoite is required" })}
-        error={!!errors.Osoite}
-        helperText={errors.Osoite?.message}
-      />
-      <TextField
-        label="Adress"
-        fullWidth
-        {...register("Adress", { required: "Adress is required" })}
-        error={!!errors.Adress}
-        helperText={errors.Adress?.message}
-      />
-      <TextField
-        label="Kaupunki"
-        fullWidth
-        {...register("Kaupunki", { required: "Kaupunki is required" })}
-        error={!!errors.Kaupunki}
-        helperText={errors.Kaupunki?.message}
-      />
-      <TextField
-        label="Stad"
-        fullWidth
-        {...register("Stad", { required: "Stad is required" })}
-        error={!!errors.Stad}
-        helperText={errors.Stad?.message}
-      />
-      <TextField
-        label="Operaattor"
-        fullWidth
-        {...register("Operaattor", { required: "Operaattor is required" })}
-        error={!!errors.Operaattor}
-        helperText={errors.Operaattor?.message}
-      />
-      <TextField
-        label="Kapasiteet"
-        fullWidth
-        {...register("Kapasiteet", { required: "Kapasiteet is required" })}
-        error={!!errors.Kapasiteet}
-        helperText={errors.Kapasiteet?.message}
-      />
-      <TextField
-        label="x"
-        fullWidth
-        {...register("x", { required: "x is required" })}
-        error={!!errors.x}
-        helperText={errors.x?.message}
-      />
-      <TextField
-        label="y"
-        fullWidth
-        {...register("y", { required: "y is required" })}
-        error={!!errors.y}
-        helperText={errors.y?.message}
-      />
+    <>
+      <CssBaseline />
+      <Header />
+      <Paper sx={styles.paper}>
+        <Box sx={styles.box}>
+          <Card variant="outlined" sx={styles.card}>
+            <Typography variant={"h3"} color="#fff">
+              Add Station
+            </Typography>
 
-      <Button type="submit" variant="contained" color="primary">
-        Submit
-      </Button>
-    </form>
+            <Box p={2}>
+              <form onSubmit={handleSubmit(handleFormSubmit)}>
+                <Grid container spacing={2}>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="FID"
+                      fullWidth
+                      {...register("FID", {
+                        required: "FID is required",
+                        pattern: {
+                          value: /^[0-9]+$/,
+                          message: "This field should be a number",
+                        },
+                      })}
+                      error={!!errors.FID}
+                      helperText={errors.FID?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="FID" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="ID"
+                      fullWidth
+                      {...register("ID", {
+                        required: "ID is required",
+                        pattern: {
+                          value: /^[0-9]+$/,
+                          message: "This field should be a number",
+                        },
+                      })}
+                      error={!!errors.ID}
+                      helperText={errors.ID?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="ID" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="Nimi"
+                      fullWidth
+                      {...register("Nimi", { required: "Nimi is required" })}
+                      error={!!errors.Nimi}
+                      helperText={errors.Nimi?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="Nimi" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="Namn"
+                      fullWidth
+                      {...register("Namn", { required: "Namn is required" })}
+                      error={!!errors.Namn}
+                      helperText={errors.Namn?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="Namn" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="Name"
+                      fullWidth
+                      {...register("Name", { required: "Name is required" })}
+                      error={!!errors.Name}
+                      helperText={errors.Name?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="Name" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="Osoite"
+                      fullWidth
+                      {...register("Osoite", {
+                        required: "Osoite is required",
+                      })}
+                      error={!!errors.Osoite}
+                      helperText={errors.Osoite?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="Osoite" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="Address"
+                      fullWidth
+                      {...register("Adress", {
+                        required: "Address is required",
+                      })}
+                      error={!!errors.Adress}
+                      helperText={errors.Adress?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="Adress" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="Kaupunki"
+                      fullWidth
+                      {...register("Kaupunki", {
+                        required: "Kaupunki is required",
+                      })}
+                      error={!!errors.Kaupunki}
+                      helperText={errors.Kaupunki?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="Kaupunki" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="Stad"
+                      fullWidth
+                      {...register("Stad", { required: "Stad is required" })}
+                      error={!!errors.Stad}
+                      helperText={errors.Stad?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="Stad" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="Operaattor"
+                      fullWidth
+                      {...register("Operaattor", {
+                        required: "Operaattor is required",
+                      })}
+                      error={!!errors.Operaattor}
+                      helperText={errors.Operaattor?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="Operaattor" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="Kapasiteet"
+                      fullWidth
+                      {...register("Kapasiteet", {
+                        required: "Kapasiteet is required",
+                      })}
+                      error={!!errors.Kapasiteet}
+                      helperText={errors.Kapasiteet?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="Kapasiteet" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="X"
+                      fullWidth
+                      {...register("x", {
+                        required: "x is required",
+                        pattern: {
+                          value: /^[0-9]+$/,
+                          message: "This field should be a number",
+                        },
+                      })}
+                      error={!!errors.x}
+                      helperText={errors.x?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="x" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      label="Y"
+                      fullWidth
+                      {...register("y", {
+                        required: "y is required",
+                        pattern: {
+                          value: /^[0-9]+$/,
+                          message: "This field should be a number",
+                        },
+                      })}
+                      error={!!errors.y}
+                      helperText={errors.y?.message}
+                      sx={styles.textField}
+                      autoComplete="off"
+                      data-testid="y" // Add data-testid attribute
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Button
+                      type="submit"
+                      variant="contained"
+                      color="primary"
+                      fullWidth
+                      data-testid="submit-btn" // Add data-testid attribute
+                    >
+                      Submit
+                    </Button>
+                  </Grid>
+                </Grid>
+              </form>
+            </Box>
+          </Card>
+        </Box>
+      </Paper>
+    </>
   );
 };
 

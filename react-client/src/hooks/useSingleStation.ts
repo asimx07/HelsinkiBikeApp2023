@@ -3,13 +3,13 @@ import { getStationByID } from "../api/getStationById";
 import { useParams } from "react-router-dom";
 
 export const useSingleStation = () => {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams();
   const [station, setStation] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    const fetchStation = async () => {
+    const fetchStation = async (id: string) => {
       try {
         const response = await getStationByID(id);
         const stationData = await response.json();
@@ -22,7 +22,7 @@ export const useSingleStation = () => {
       }
     };
 
-    fetchStation();
+    fetchStation(id || "");
   }, [id]);
 
   return { station, loading, error };

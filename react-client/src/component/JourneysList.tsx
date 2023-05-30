@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-import { getJourneys } from "../api/getJourneys";
 import Header from "./Header";
 import {
   Paper,
@@ -17,9 +15,9 @@ import {
 } from "@mui/material";
 import { ArrowUpward, ArrowDownward } from "@mui/icons-material";
 import { styles } from "../styles/tableStyles";
-const APP_URL = import.meta.env.VITE_PUBLIC_URL;
 import { useJourneysList } from "../hooks/useJourneys";
-
+import { useNavigate } from "react-router-dom";
+import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 interface Column {
   id:
     | "departureStationName"
@@ -57,10 +55,10 @@ const columns: readonly Column[] = [
 ];
 
 export const JourneysList = () => {
+  const navigate = useNavigate();
+
   const {
-    sortColumn,
     sortDirection,
-    allJourneys,
     currentPage,
     totalPages,
     pageSize,
@@ -70,13 +68,14 @@ export const JourneysList = () => {
     handlePageSizeChange,
     setCurrentPage,
   } = useJourneysList();
+  const handleAddJourney = () => {
+    navigate("/journey/create");
+  };
   const renderSortIcon = (columnId: string) => {
-    // Check if the column is sortable
     const sortableColumn = columns.find(
       (column) => column.id === columnId && column.sortable
     );
     if (sortableColumn) {
-      // Render the sort icon based on the sort direction
       return sortDirection === "asc" ? (
         <ArrowUpward fontSize="small" />
       ) : (
@@ -91,7 +90,7 @@ export const JourneysList = () => {
     return (
       <>
         <CssBaseline />
-        <Container style={styles.root}>
+        <Container sx={styles.root}>
           <Header />
           <Paper
             sx={{
@@ -102,7 +101,7 @@ export const JourneysList = () => {
             }}
           >
             <Typography
-              variant="h"
+              variant="h2"
               align="center"
               style={{ color: "#fff", padding: "50px" }}
             >
@@ -117,7 +116,7 @@ export const JourneysList = () => {
     <>
       <CssBaseline />
 
-      <Container style={styles.root}>
+      <Container sx={styles.root}>
         <Header />
 
         <Paper sx={styles.paper}>
@@ -179,10 +178,17 @@ export const JourneysList = () => {
             count={totalPages}
             rowsPerPage={pageSize}
             page={currentPage - 1}
-            onPageChange={(event: any, newPage: number) =>
+            onPageChange={(_event: any, newPage: number) =>
               setCurrentPage(newPage + 1)
             }
             onRowsPerPageChange={handlePageSizeChange}
+            ActionsComponent={() => (
+              <IconButton onClick={handleAddJourney}>
+                <AddCircleOutlineOutlinedIcon
+                  sx={{ color: "#fff", fontSize: "2rem" }}
+                />
+              </IconButton>
+            )}
           />
         </Paper>
       </Container>

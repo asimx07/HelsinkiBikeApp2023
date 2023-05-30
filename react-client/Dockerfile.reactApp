@@ -1,0 +1,19 @@
+# Use a base Node.js image with a specific version
+FROM node:16
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the frontend app code
+COPY . .
+
+EXPOSE 5000
+
+# Serve the built app using a simple HTTP server
+CMD ["npm", "run", "dev"]

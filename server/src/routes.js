@@ -6,10 +6,12 @@ var router = express.Router();
 
 //journey routes
 router.get("/journey/:id", journeyController.getJourneyByID);
-router.get("/journey", journeyController.getAllJourneys);
-
+router.get("/journeys", journeyController.getAllJourneys);
+router.post("/journey", journeyController.createJourney);
 //station routes
 router.get("/stations", stationController.getAllStations);
 router.get("/station/:id", stationController.getStationByID);
+router.post("/station", stationController.createStation);
+
 
 export default router;

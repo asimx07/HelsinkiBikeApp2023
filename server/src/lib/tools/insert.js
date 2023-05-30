@@ -26,11 +26,10 @@ export const insertJourneys = async (collection) => {
 
   let { chunk: _chunk } = pkg;
   let CHUNK = 300000;
-  let PARALLEL_EXECUTIONS = 6;
-  let PARALLEL_EXECUTION_CHUNK = 50000;
+  let PARALLEL_EXECUTIONS = 4;
+  let PARALLEL_EXECUTION_CHUNK = 75000;
   let journeyFilePaths = getFilesFromDirectory("./data/journeys");
   let BYTE_IN_MB = 0.00000095367432;
-  let journeyValidator = getJourneyValidator();
   let arrayToInsert = [];
   let insertedDocs = 0;
   let skippedDocs = 0;
@@ -62,12 +61,9 @@ export const insertJourneys = async (collection) => {
             3
           )} mb, records: ${chunk.length}`;
           console.time(`id: ${now} - stats: ${stats} - took: `);
-          await col
-            .insertMany(chunk, journeyValidator, { ordered: false })
-            .catch((err) => {
-              console.log(err);
-              process.exit(1);
-            });
+          await col.insertMany(chunk, { ordered: false }).catch((err) => {
+            console.log(err);
+          });
           console.timeEnd(`id: ${now} - stats: ${stats} - took: `);
         });
         console.log("--------------\n");
@@ -88,12 +84,9 @@ export const insertJourneys = async (collection) => {
           3
         )} mb, records: ${chunk.length}`;
         console.time(`id: ${now} - stats: ${stats} - took: `);
-        await col
-          .insertMany(chunk, journeyValidator, { ordered: false })
-          .catch((err) => {
-            console.log(err);
-            process.exit(1);
-          });
+        await col.insertMany(chunk, { ordered: false }).catch((err) => {
+          console.log(err);
+        });
         console.timeEnd(`id: ${now} - stats: ${stats} - took: `);
       });
       console.log("--------------\n");
@@ -112,7 +105,6 @@ export const insertStations = async (collection) => {
     return;
   }
 
-  let stationValidator = getStationValidator();
   let col = collection;
   let stationFilePaths = getFilesFromDirectory("./data/stations");
   let BYTE_IN_MB = 0.00000095367432;
@@ -125,9 +117,8 @@ export const insertStations = async (collection) => {
       3
     )} mb, records: ${jsonArray.length}`;
     console.time(`id: ${now} - stats: ${stats} - took: `);
-    await col.insertMany(jsonArray, stationValidator).catch((err) => {
+    await col.insertMany(jsonArray, { ordered: false }).catch((err) => {
       console.log(err);
-      process.exit(1);
     });
     console.timeEnd(`id: ${now} - stats: ${stats} - took: `);
   }

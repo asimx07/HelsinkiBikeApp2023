@@ -75,10 +75,8 @@ export const useJourneysList = () => {
     event: React.ChangeEvent<{ value: string }>
   ) => {
     const newPageSize = parseInt(event.target.value, 10);
-    //const newTotalPages = Math.ceil(totalPages / newPageSize);
 
     setPageSize(newPageSize);
-    //setTotalPages(newTotalPages);
     setCurrentPage(1);
   };
 

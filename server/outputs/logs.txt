@@ -365,3 +365,639 @@
 2023-05-23T19:50:34.349Z info: There is already data in Journey Collection
 2023-05-23T19:50:34.353Z info: There is already data in Station Collection
 2023-05-23T19:50:34.355Z info: insertData took 89.59479999542236 milliseconds.
+2023-05-25T18:26:32.063Z info: Server listening at Port 3000
+2023-05-25T18:26:32.320Z info: There is already data in Journey Collection
+2023-05-25T18:26:32.347Z info: There is already data in Station Collection
+2023-05-25T18:26:32.348Z info: insertData took 172.45809996128082 milliseconds.
+2023-05-26T23:42:29.011Z info: Server listening at Port 3000
+2023-05-26T23:42:29.117Z info: There is already data in Journey Collection
+2023-05-26T23:42:29.121Z info: There is already data in Station Collection
+2023-05-26T23:42:29.122Z info: insertData took 68.22350001335144 milliseconds.
+2023-05-26T23:51:53.621Z info: Server listening at Port 3000
+2023-05-26T23:51:53.742Z info: There is already data in Journey Collection
+2023-05-26T23:51:53.745Z info: There is already data in Station Collection
+2023-05-26T23:51:53.745Z info: insertData took 75.58840000629425 milliseconds.
+2023-05-27T00:02:34.141Z info: Server listening at Port 3000
+2023-05-27T00:02:34.292Z info: There is already data in Journey Collection
+2023-05-27T00:02:34.297Z info: There is already data in Station Collection
+2023-05-27T00:02:34.297Z info: insertData took 98.65710008144379 milliseconds.
+2023-05-27T00:02:47.335Z info: Server listening at Port 3000
+2023-05-27T00:02:47.467Z info: There is already data in Journey Collection
+2023-05-27T00:02:47.470Z info: There is already data in Station Collection
+2023-05-27T00:02:47.471Z info: insertData took 87.03750002384186 milliseconds.
+2023-05-27T00:03:00.886Z info: Server listening at Port 3000
+2023-05-27T00:03:01.027Z info: There is already data in Journey Collection
+2023-05-27T00:03:01.030Z info: There is already data in Station Collection
+2023-05-27T00:03:01.030Z info: insertData took 98.20949995517731 milliseconds.
+2023-05-27T00:03:11.902Z info: Server listening at Port 3000
+2023-05-27T00:03:12.069Z info: There is already data in Journey Collection
+2023-05-27T00:03:12.073Z info: There is already data in Station Collection
+2023-05-27T00:03:12.074Z info: insertData took 125.17589998245239 milliseconds.
+2023-05-27T00:07:55.259Z info: Server listening at Port 3000
+2023-05-27T00:07:55.437Z info: There is already data in Journey Collection
+2023-05-27T00:07:55.440Z info: There is already data in Station Collection
+2023-05-27T00:07:55.441Z info: insertData took 107.0058000087738 milliseconds.
+2023-05-27T00:07:55.670Z info: 507
+2023-05-27T00:08:21.945Z info: Server listening at Port 3000
+2023-05-27T00:08:22.077Z info: There is already data in Journey Collection
+2023-05-27T00:08:22.080Z info: There is already data in Station Collection
+2023-05-27T00:08:22.081Z info: insertData took 80.26380002498627 milliseconds.
+2023-05-27T00:08:28.291Z info: 507
+2023-05-27T00:08:28.308Z info: {
+  _id: new ObjectId("646cf37184fd9f15f540149b"),
+  FID: 4,
+  ID: 507,
+  Nimi: 'Golfpolku',
+  Namn: 'Golfstigen',
+  Name: 'Golfpolku',
+  Osoite: 'Golfpolku 3',
+  Adress: 'Golfstigen 3',
+  Kaupunki: 'Espoo',
+  Stad: 'Esbo',
+  Operaattor: 'CityBike Finland',
+  Kapasiteet: '16',
+  x: 24.796136,
+  y: 60.168143,
+  __v: 0
+}
+2023-05-27T00:08:51.658Z info: Server listening at Port 3000
+2023-05-27T00:08:51.745Z info: 507
+2023-05-27T00:08:51.821Z info: {
+  _id: new ObjectId("646cf37184fd9f15f540149b"),
+  FID: 4,
+  ID: 507,
+  Nimi: 'Golfpolku',
+  Namn: 'Golfstigen',
+  Name: 'Golfpolku',
+  Osoite: 'Golfpolku 3',
+  Adress: 'Golfstigen 3',
+  Kaupunki: 'Espoo',
+  Stad: 'Esbo',
+  Operaattor: 'CityBike Finland',
+  Kapasiteet: '16',
+  x: 24.796136,
+  y: 60.168143,
+  __v: 0
+}
+2023-05-27T00:08:51.874Z info: There is already data in Journey Collection
+2023-05-27T00:08:51.880Z info: There is already data in Station Collection
+2023-05-27T00:08:51.881Z info: insertData took 157.81400001049042 milliseconds.
+2023-05-27T00:09:05.117Z info: Server listening at Port 3000
+2023-05-27T00:09:05.341Z info: There is already data in Journey Collection
+2023-05-27T00:09:05.344Z info: There is already data in Station Collection
+2023-05-27T00:09:05.345Z info: insertData took 140.489599943161 milliseconds.
+2023-05-27T00:09:09.815Z info: 507
+2023-05-27T00:09:09.830Z info: undefined
+2023-05-27T00:09:35.930Z info: Server listening at Port 3000
+2023-05-27T00:09:36.304Z info: There is already data in Journey Collection
+2023-05-27T00:09:36.308Z info: There is already data in Station Collection
+2023-05-27T00:09:36.310Z info: insertData took 122.00249993801117 milliseconds.
+2023-05-27T00:09:37.830Z info: 507
+2023-05-27T00:09:37.852Z error: Cannot read properties of undefined (reading 'Name')
+2023-05-27T00:10:00.864Z info: Server listening at Port 3000
+2023-05-27T00:10:01.000Z info: There is already data in Journey Collection
+2023-05-27T00:10:01.004Z info: There is already data in Station Collection
+2023-05-27T00:10:01.005Z info: insertData took 84.88899993896484 milliseconds.
+2023-05-27T00:10:01.809Z info: 507
+2023-05-27T00:10:01.827Z info: undefined
+2023-05-27T00:11:55.945Z info: Server listening at Port 3000
+2023-05-27T00:11:56.036Z info: 507
+2023-05-27T00:11:56.121Z info: 646cf37184fd9f15f540149b
+2023-05-27T00:11:56.138Z info: There is already data in Journey Collection
+2023-05-27T00:11:56.145Z info: There is already data in Station Collection
+2023-05-27T00:11:56.147Z info: insertData took 137.86419999599457 milliseconds.
+2023-05-27T00:12:23.016Z info: Server listening at Port 3000
+2023-05-27T00:12:23.139Z info: There is already data in Journey Collection
+2023-05-27T00:12:23.143Z info: There is already data in Station Collection
+2023-05-27T00:12:23.144Z info: insertData took 74.87990009784698 milliseconds.
+2023-05-27T00:12:23.369Z info: 507
+2023-05-27T00:12:23.388Z info: 646cf37184fd9f15f540149b
+2023-05-27T00:13:59.060Z info: Server listening at Port 3000
+2023-05-27T00:13:59.199Z info: There is already data in Journey Collection
+2023-05-27T00:13:59.202Z info: There is already data in Station Collection
+2023-05-27T00:13:59.203Z info: insertData took 85.6302000284195 milliseconds.
+2023-05-27T00:14:17.051Z info: Server listening at Port 3000
+2023-05-27T00:14:17.256Z info: There is already data in Journey Collection
+2023-05-27T00:14:17.262Z info: There is already data in Station Collection
+2023-05-27T00:14:17.266Z info: insertData took 149.87990009784698 milliseconds.
+2023-05-27T00:15:08.376Z info: Server listening at Port 3000
+2023-05-27T00:15:08.541Z info: There is already data in Journey Collection
+2023-05-27T00:15:08.546Z info: There is already data in Station Collection
+2023-05-27T00:15:08.547Z info: insertData took 95.8795999288559 milliseconds.
+2023-05-27T00:36:31.007Z info: 503
+2023-05-27T00:36:31.019Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:36:35.011Z info: 503
+2023-05-27T00:36:35.017Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:36:35.050Z info: 503
+2023-05-27T00:36:35.054Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:38:08.979Z info: 503
+2023-05-27T00:38:08.985Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:38:09.033Z info: 503
+2023-05-27T00:38:09.038Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:38:35.418Z info: 503
+2023-05-27T00:38:35.423Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:39:06.237Z info: 503
+2023-05-27T00:39:06.242Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:40:56.899Z info: Server listening at Port 3000
+2023-05-27T00:40:57.032Z info: There is already data in Journey Collection
+2023-05-27T00:40:57.036Z info: There is already data in Station Collection
+2023-05-27T00:40:57.036Z info: insertData took 86.87950003147125 milliseconds.
+2023-05-27T00:41:03.896Z info: 507
+2023-05-27T00:41:03.914Z info: 646cf37184fd9f15f540149b
+2023-05-27T00:42:39.420Z info: 503
+2023-05-27T00:42:39.430Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:42:47.723Z info: 503
+2023-05-27T00:42:47.730Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:42:47.778Z info: 503
+2023-05-27T00:42:47.785Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:43:02.395Z info: 503
+2023-05-27T00:43:02.402Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:44:03.203Z info: 503
+2023-05-27T00:44:03.209Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:44:21.966Z info: 503
+2023-05-27T00:44:21.971Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:44:22.005Z info: 503
+2023-05-27T00:44:22.012Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:44:43.872Z info: 503
+2023-05-27T00:44:43.880Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:44:47.419Z info: 503
+2023-05-27T00:44:47.426Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:44:47.466Z info: 503
+2023-05-27T00:44:47.478Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:45:30.996Z info: 503
+2023-05-27T00:45:31.003Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:45:35.912Z info: 503
+2023-05-27T00:45:35.917Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:45:35.956Z info: 503
+2023-05-27T00:45:35.961Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:45:47.294Z info: 503
+2023-05-27T00:45:47.300Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:45:53.841Z info: 503
+2023-05-27T00:45:53.846Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:45:53.874Z info: 503
+2023-05-27T00:45:53.879Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:46:05.930Z info: 503
+2023-05-27T00:46:05.937Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:49:05.510Z info: 503
+2023-05-27T00:49:05.514Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:49:18.745Z info: 503
+2023-05-27T00:49:18.750Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:49:18.778Z info: 503
+2023-05-27T00:49:18.784Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:49:22.083Z info: 503
+2023-05-27T00:49:22.096Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:49:26.734Z info: 503
+2023-05-27T00:49:26.742Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:49:26.784Z info: 503
+2023-05-27T00:49:26.790Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:50:41.685Z info: 503
+2023-05-27T00:50:41.690Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:54:15.299Z info: 503
+2023-05-27T00:54:15.304Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:54:15.355Z info: 503
+2023-05-27T00:54:15.360Z info: 646cf37184fd9f15f5401499
+2023-05-27T00:54:21.313Z info: 577
+2023-05-27T00:54:21.318Z info: 646cf37184fd9f15f54014be
+2023-05-27T00:54:21.357Z info: 577
+2023-05-27T00:54:21.364Z info: 646cf37184fd9f15f54014be
+2023-05-27T00:56:44.300Z info: 577
+2023-05-27T00:56:44.304Z info: 646cf37184fd9f15f54014be
+2023-05-27T00:58:53.311Z info: 577
+2023-05-27T00:58:53.315Z info: 646cf37184fd9f15f54014be
+2023-05-27T00:59:40.974Z info: 577
+2023-05-27T00:59:40.980Z info: 646cf37184fd9f15f54014be
+2023-05-27T00:59:45.571Z info: 577
+2023-05-27T00:59:45.576Z info: 646cf37184fd9f15f54014be
+2023-05-27T00:59:45.621Z info: 577
+2023-05-27T00:59:45.627Z info: 646cf37184fd9f15f54014be
+2023-05-27T00:59:54.878Z info: 577
+2023-05-27T00:59:54.884Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:00:27.793Z info: 577
+2023-05-27T01:00:27.797Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:00:27.912Z info: 577
+2023-05-27T01:00:27.916Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:01:09.606Z info: Server listening at Port 3000
+2023-05-27T01:01:09.843Z info: There is already data in Journey Collection
+2023-05-27T01:01:09.848Z info: There is already data in Station Collection
+2023-05-27T01:01:09.849Z info: insertData took 148.99629998207092 milliseconds.
+2023-05-27T01:01:14.902Z info: 577
+2023-05-27T01:01:14.921Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:01:14.971Z info: 577
+2023-05-27T01:01:14.981Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:02:33.213Z info: 577
+2023-05-27T01:02:33.221Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:02:44.142Z info: 577
+2023-05-27T01:02:44.148Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:03:08.183Z info: 577
+2023-05-27T01:03:08.189Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:03:32.403Z info: 577
+2023-05-27T01:03:32.409Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:03:44.993Z info: 577
+2023-05-27T01:03:44.998Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:03:48.728Z info: 577
+2023-05-27T01:03:48.734Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:03:48.785Z info: 577
+2023-05-27T01:03:48.791Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:04:03.503Z info: 577
+2023-05-27T01:04:03.510Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:04:11.728Z info: 577
+2023-05-27T01:04:11.733Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:04:11.861Z info: 577
+2023-05-27T01:04:11.866Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:04:16.860Z info: 577
+2023-05-27T01:04:16.864Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:04:16.916Z info: 577
+2023-05-27T01:04:16.925Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:05:01.884Z info: 577
+2023-05-27T01:05:01.889Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:05:06.195Z info: 577
+2023-05-27T01:05:06.200Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:05:06.279Z info: 577
+2023-05-27T01:05:06.284Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:06:02.223Z info: 577
+2023-05-27T01:06:02.228Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:06:25.438Z info: 577
+2023-05-27T01:06:25.442Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:06:51.178Z info: 577
+2023-05-27T01:06:51.182Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:06:55.326Z info: 577
+2023-05-27T01:06:55.331Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:06:55.351Z info: 577
+2023-05-27T01:06:55.359Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:08:57.413Z info: 577
+2023-05-27T01:08:57.417Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:09:00.867Z info: 577
+2023-05-27T01:09:00.871Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:09:00.926Z info: 577
+2023-05-27T01:09:00.932Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:09:29.550Z info: 577
+2023-05-27T01:09:29.555Z info: 577
+2023-05-27T01:09:29.560Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:09:29.562Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:10:18.403Z info: 577
+2023-05-27T01:10:18.408Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:10:18.420Z info: 577
+2023-05-27T01:10:18.424Z info: 646cf37184fd9f15f54014be
+2023-05-27T01:12:10.653Z info: 503
+2023-05-27T01:12:10.659Z info: 646cf37184fd9f15f5401499
+2023-05-27T01:12:10.676Z info: 503
+2023-05-27T01:12:10.679Z info: 646cf37184fd9f15f5401499
+2023-05-27T01:13:02.149Z info: 507
+2023-05-27T01:13:02.154Z info: 646cf37184fd9f15f540149b
+2023-05-27T01:13:02.178Z info: 507
+2023-05-27T01:13:02.185Z info: 646cf37184fd9f15f540149b
+2023-05-27T01:13:07.326Z info: 621
+2023-05-27T01:13:07.332Z info: 646cf37184fd9f15f54014d3
+2023-05-27T01:13:07.370Z info: 621
+2023-05-27T01:13:07.376Z info: 646cf37184fd9f15f54014d3
+2023-05-27T01:15:43.500Z info: 621
+2023-05-27T01:15:43.507Z info: 646cf37184fd9f15f54014d3
+2023-05-27T01:15:43.534Z info: 621
+2023-05-27T01:15:43.537Z info: 646cf37184fd9f15f54014d3
+2023-05-27T01:17:29.246Z info: 621
+2023-05-27T01:17:29.250Z info: 646cf37184fd9f15f54014d3
+2023-05-27T01:17:29.275Z info: 621
+2023-05-27T01:17:29.281Z info: 646cf37184fd9f15f54014d3
+2023-05-27T01:23:16.975Z info: 507
+2023-05-27T01:23:16.979Z info: 646cf37184fd9f15f540149b
+2023-05-27T01:23:16.993Z info: 507
+2023-05-27T01:23:16.997Z info: 646cf37184fd9f15f540149b
+2023-05-27T01:40:04.332Z info: 507
+2023-05-27T01:40:04.338Z info: 646cf37184fd9f15f540149b
+2023-05-27T01:40:04.375Z info: 507
+2023-05-27T01:40:04.388Z info: 646cf37184fd9f15f540149b
+2023-05-27T01:52:57.768Z info: Server listening at Port 3000
+2023-05-27T01:52:57.868Z info: There is already data in Journey Collection
+2023-05-27T01:52:57.871Z info: There is already data in Station Collection
+2023-05-27T01:52:57.871Z info: insertData took 63.39740002155304 milliseconds.
+2023-05-27T01:53:01.313Z error: totalPages is not defined
+2023-05-27T01:53:01.326Z error: totalPages is not defined
+2023-05-27T01:53:06.518Z info: Server listening at Port 3000
+2023-05-27T01:53:06.681Z info: There is already data in Journey Collection
+2023-05-27T01:53:06.684Z info: There is already data in Station Collection
+2023-05-27T01:53:06.684Z info: insertData took 98.53779995441437 milliseconds.
+2023-05-27T01:53:16.702Z error: totalPages is not defined
+2023-05-27T01:53:16.713Z error: totalPages is not defined
+2023-05-27T01:54:02.944Z info: Server listening at Port 3000
+2023-05-27T01:54:03.061Z info: There is already data in Journey Collection
+2023-05-27T01:54:03.065Z info: There is already data in Station Collection
+2023-05-27T01:54:03.066Z info: insertData took 74.00959992408752 milliseconds.
+2023-05-27T01:54:07.430Z error: totalPages is not defined
+2023-05-27T01:54:07.448Z error: totalPages is not defined
+2023-05-27T01:55:12.510Z info: Server listening at Port 3000
+2023-05-27T01:55:12.623Z info: There is already data in Journey Collection
+2023-05-27T01:55:12.626Z info: There is already data in Station Collection
+2023-05-27T01:55:12.627Z info: insertData took 70.19949996471405 milliseconds.
+2023-05-27T01:55:25.496Z info: Server listening at Port 3000
+2023-05-27T01:55:25.669Z info: There is already data in Journey Collection
+2023-05-27T01:55:25.673Z info: There is already data in Station Collection
+2023-05-27T01:55:25.674Z info: insertData took 103.49459993839264 milliseconds.
+2023-05-27T01:56:26.878Z info: Server listening at Port 3000
+2023-05-27T01:56:27.022Z info: There is already data in Journey Collection
+2023-05-27T01:56:27.027Z info: There is already data in Station Collection
+2023-05-27T01:56:27.028Z info: insertData took 92.23970007896423 milliseconds.
+2023-05-27T01:57:08.492Z info: Server listening at Port 3000
+2023-05-27T01:57:08.618Z info: There is already data in Journey Collection
+2023-05-27T01:57:08.621Z info: There is already data in Station Collection
+2023-05-27T01:57:08.622Z info: insertData took 76.41929996013641 milliseconds.
+2023-05-27T01:57:57.268Z info: Server listening at Port 3000
+2023-05-27T01:57:57.591Z info: There is already data in Journey Collection
+2023-05-27T01:57:57.609Z info: There is already data in Station Collection
+2023-05-27T01:57:57.631Z info: insertData took 278.52009999752045 milliseconds.
+2023-05-27T02:13:24.985Z info: Server listening at Port 3000
+2023-05-27T02:13:25.171Z info: There is already data in Journey Collection
+2023-05-27T02:13:25.176Z info: There is already data in Station Collection
+2023-05-27T02:13:25.177Z info: insertData took 99.25239992141724 milliseconds.
+2023-05-27T02:15:45.270Z info: Server listening at Port 3000
+2023-05-27T02:15:45.836Z info: There is already data in Journey Collection
+2023-05-27T02:15:45.851Z info: There is already data in Station Collection
+2023-05-27T02:15:45.852Z info: insertData took 286.67960000038147 milliseconds.
+2023-05-27T02:16:13.190Z info: Server listening at Port 3000
+2023-05-27T02:16:13.587Z info: There is already data in Journey Collection
+2023-05-27T02:16:13.611Z info: There is already data in Station Collection
+2023-05-27T02:16:13.613Z info: insertData took 344.95730006694794 milliseconds.
+2023-05-27T02:23:35.809Z info: Server listening at Port 3000
+2023-05-27T02:23:35.925Z info: There is already data in Journey Collection
+2023-05-27T02:23:35.928Z info: There is already data in Station Collection
+2023-05-27T02:23:35.928Z info: insertData took 69.37219989299774 milliseconds.
+2023-05-27T02:31:45.787Z error: Invalid page number
+2023-05-27T02:33:19.360Z info: Server listening at Port 3000
+2023-05-27T02:33:19.507Z info: There is already data in Journey Collection
+2023-05-27T02:33:19.512Z info: There is already data in Station Collection
+2023-05-27T02:33:19.513Z info: insertData took 87.59220004081726 milliseconds.
+2023-05-27T02:33:45.796Z info: Server listening at Port 3000
+2023-05-27T02:33:45.965Z info: There is already data in Journey Collection
+2023-05-27T02:33:45.968Z info: There is already data in Station Collection
+2023-05-27T02:33:45.969Z info: insertData took 90.81580007076263 milliseconds.
+2023-05-27T02:43:48.062Z info: Server listening at Port 3000
+2023-05-27T02:43:48.181Z info: There is already data in Journey Collection
+2023-05-27T02:43:48.186Z info: There is already data in Station Collection
+2023-05-27T02:43:48.187Z info: insertData took 74.2525999546051 milliseconds.
+2023-05-27T02:44:58.228Z info: Server listening at Port 3000
+2023-05-27T02:44:58.370Z info: There is already data in Journey Collection
+2023-05-27T02:44:58.373Z info: There is already data in Station Collection
+2023-05-27T02:44:58.374Z info: insertData took 92.08899998664856 milliseconds.
+2023-05-27T02:47:49.707Z error: Page not found
+2023-05-27T02:52:13.748Z info: Server listening at Port 3000
+2023-05-27T02:52:13.916Z info: There is already data in Journey Collection
+2023-05-27T02:52:13.920Z info: There is already data in Station Collection
+2023-05-27T02:52:13.921Z info: insertData took 98.18830001354218 milliseconds.
+2023-05-27T02:53:13.565Z info: Server listening at Port 3000
+2023-05-27T02:53:13.760Z info: There is already data in Journey Collection
+2023-05-27T02:53:13.764Z info: There is already data in Station Collection
+2023-05-27T02:53:13.765Z info: insertData took 103.69700002670288 milliseconds.
+2023-05-27T02:53:51.091Z info: Server listening at Port 3000
+2023-05-27T02:53:51.205Z info: There is already data in Journey Collection
+2023-05-27T02:53:51.207Z info: There is already data in Station Collection
+2023-05-27T02:53:51.208Z info: insertData took 68.50700008869171 milliseconds.
+2023-05-27T02:54:09.686Z error: Page not found
+2023-05-27T02:54:57.593Z info: Server listening at Port 3000
+2023-05-27T02:54:57.728Z info: There is already data in Journey Collection
+2023-05-27T02:54:57.732Z info: There is already data in Station Collection
+2023-05-27T02:54:57.733Z info: insertData took 80.9394999742508 milliseconds.
+2023-05-27T23:40:10.621Z info: Server listening at Port 3000
+2023-05-27T23:40:10.758Z info: There is already data in Journey Collection
+2023-05-27T23:40:10.761Z info: There is already data in Station Collection
+2023-05-27T23:40:10.762Z info: insertData took 87.973100066185 milliseconds.
+2023-05-27T23:43:13.765Z info: Server listening at Port 3000
+2023-05-27T23:43:14.004Z info: There is already data in Journey Collection
+2023-05-27T23:43:14.008Z info: There is already data in Station Collection
+2023-05-27T23:43:14.009Z info: insertData took 88.88100004196167 milliseconds.
+2023-05-27T23:43:24.645Z info: Server listening at Port 3000
+2023-05-27T23:43:24.817Z info: There is already data in Journey Collection
+2023-05-27T23:43:24.821Z info: There is already data in Station Collection
+2023-05-27T23:43:24.821Z info: insertData took 101.69700002670288 milliseconds.
+2023-05-27T23:43:58.403Z info: Server listening at Port 3000
+2023-05-27T23:43:58.527Z info: There is already data in Journey Collection
+2023-05-27T23:43:58.530Z info: There is already data in Station Collection
+2023-05-27T23:43:58.530Z info: insertData took 83.29390001296997 milliseconds.
+2023-05-27T23:44:13.231Z info: Server listening at Port 3000
+2023-05-27T23:44:13.395Z info: There is already data in Journey Collection
+2023-05-27T23:44:13.403Z info: There is already data in Station Collection
+2023-05-27T23:44:13.404Z info: insertData took 113.73159992694855 milliseconds.
+2023-05-27T23:44:19.267Z info: Server listening at Port 3000
+2023-05-27T23:44:19.591Z info: There is already data in Journey Collection
+2023-05-27T23:44:19.595Z info: There is already data in Station Collection
+2023-05-27T23:44:19.596Z info: insertData took 209.62110006809235 milliseconds.
+2023-05-27T23:47:43.591Z info: Server listening at Port 3000
+2023-05-27T23:47:43.712Z info: There is already data in Journey Collection
+2023-05-27T23:47:43.715Z info: There is already data in Station Collection
+2023-05-27T23:47:43.715Z info: insertData took 72.56699991226196 milliseconds.
+2023-05-27T23:47:45.416Z error: Journey.insertOne is not a function
+2023-05-27T23:47:59.274Z info: Server listening at Port 3000
+2023-05-27T23:47:59.580Z info: There is already data in Journey Collection
+2023-05-27T23:47:59.585Z info: There is already data in Station Collection
+2023-05-27T23:47:59.587Z info: insertData took 184.49810004234314 milliseconds.
+2023-05-27T23:48:01.027Z error: Journey.insert is not a function
+2023-05-27T23:50:18.316Z info: Server listening at Port 3000
+2023-05-27T23:50:18.431Z info: There is already data in Journey Collection
+2023-05-27T23:50:18.435Z info: There is already data in Station Collection
+2023-05-27T23:50:18.435Z info: insertData took 71.4210000038147 milliseconds.
+2023-05-27T23:50:19.134Z error: error is not defined
+2023-05-27T23:51:20.192Z info: Server listening at Port 3000
+2023-05-27T23:51:20.314Z info: There is already data in Journey Collection
+2023-05-27T23:51:20.317Z info: There is already data in Station Collection
+2023-05-27T23:51:20.318Z info: insertData took 74.11319994926453 milliseconds.
+2023-05-27T23:53:30.577Z info: Server listening at Port 3000
+2023-05-27T23:53:30.696Z info: There is already data in Journey Collection
+2023-05-27T23:53:30.700Z info: There is already data in Station Collection
+2023-05-27T23:53:30.701Z info: insertData took 72.45269989967346 milliseconds.
+2023-05-27T23:54:18.898Z info: Server listening at Port 3000
+2023-05-27T23:54:19.035Z info: There is already data in Journey Collection
+2023-05-27T23:54:19.038Z info: There is already data in Station Collection
+2023-05-27T23:54:19.039Z info: insertData took 87.29709994792938 milliseconds.
+2023-05-27T23:54:45.115Z info: Server listening at Port 3000
+2023-05-27T23:54:45.311Z info: There is already data in Journey Collection
+2023-05-27T23:54:45.315Z info: There is already data in Station Collection
+2023-05-27T23:54:45.315Z info: insertData took 129.02289998531342 milliseconds.
+2023-05-27T23:55:46.681Z info: Server listening at Port 3000
+2023-05-27T23:55:46.866Z info: There is already data in Journey Collection
+2023-05-27T23:55:46.871Z info: There is already data in Station Collection
+2023-05-27T23:55:46.872Z info: insertData took 105.48000001907349 milliseconds.
+2023-05-27T23:55:54.443Z info: Server listening at Port 3000
+2023-05-27T23:55:54.714Z info: There is already data in Journey Collection
+2023-05-27T23:55:54.720Z info: There is already data in Station Collection
+2023-05-27T23:55:54.721Z info: insertData took 208.07420003414154 milliseconds.
+2023-05-27T23:56:14.394Z error: params.toJSON is not a function
+2023-05-27T23:56:59.721Z info: Server listening at Port 3000
+2023-05-27T23:56:59.883Z info: There is already data in Journey Collection
+2023-05-27T23:56:59.888Z info: There is already data in Station Collection
+2023-05-27T23:56:59.889Z info: insertData took 103.3532999753952 milliseconds.
+2023-05-27T23:57:00.520Z error: Model.create() no longer accepts a callback
+2023-05-28T00:01:42.160Z info: Server listening at Port 3000
+2023-05-28T00:01:42.372Z info: There is already data in Journey Collection
+2023-05-28T00:01:42.375Z info: There is already data in Station Collection
+2023-05-28T00:01:42.376Z info: insertData took 105.22749996185303 milliseconds.
+2023-05-28T00:03:05.865Z info: Server listening at Port 3000
+2023-05-28T00:03:06.014Z info: There is already data in Journey Collection
+2023-05-28T00:03:06.019Z info: There is already data in Station Collection
+2023-05-28T00:03:06.020Z info: insertData took 80.14300000667572 milliseconds.
+2023-05-28T00:07:26.226Z info: Server listening at Port 3000
+2023-05-28T00:07:26.376Z info: There is already data in Journey Collection
+2023-05-28T00:07:26.381Z info: There is already data in Station Collection
+2023-05-28T00:07:26.383Z info: insertData took 91.37599992752075 milliseconds.
+2023-05-28T00:09:25.958Z info: Server listening at Port 3000
+2023-05-28T00:09:26.082Z info: There is already data in Journey Collection
+2023-05-28T00:09:26.085Z info: There is already data in Station Collection
+2023-05-28T00:09:26.086Z info: insertData took 67.28659999370575 milliseconds.
+2023-05-28T00:09:51.194Z info: Server listening at Port 3000
+2023-05-28T00:09:51.409Z info: There is already data in Journey Collection
+2023-05-28T00:09:51.412Z info: There is already data in Station Collection
+2023-05-28T00:09:51.413Z info: insertData took 134.0605000257492 milliseconds.
+2023-05-28T00:12:14.294Z info: Server listening at Port 3000
+2023-05-28T00:12:14.412Z info: There is already data in Journey Collection
+2023-05-28T00:12:14.415Z info: There is already data in Station Collection
+2023-05-28T00:12:14.416Z info: insertData took 70.47710001468658 milliseconds.
+2023-05-28T00:14:06.887Z info: Server listening at Port 3000
+2023-05-28T00:14:07.103Z info: There is already data in Journey Collection
+2023-05-28T00:14:07.107Z info: There is already data in Station Collection
+2023-05-28T00:14:07.108Z info: insertData took 165.9598000049591 milliseconds.
+2023-05-28T00:16:18.184Z info: Server listening at Port 3000
+2023-05-28T00:16:18.326Z info: There is already data in Journey Collection
+2023-05-28T00:16:18.329Z info: There is already data in Station Collection
+2023-05-28T00:16:18.330Z info: insertData took 71.67890000343323 milliseconds.
+2023-05-28T00:18:06.885Z info: Server listening at Port 3000
+2023-05-28T00:18:07.011Z info: There is already data in Journey Collection
+2023-05-28T00:18:07.016Z info: There is already data in Station Collection
+2023-05-28T00:18:07.017Z info: insertData took 81.06289994716644 milliseconds.
+2023-05-28T00:19:04.535Z info: Server listening at Port 3000
+2023-05-28T00:19:04.709Z info: There is already data in Journey Collection
+2023-05-28T00:19:04.712Z info: There is already data in Station Collection
+2023-05-28T00:19:04.713Z info: insertData took 100.07170009613037 milliseconds.
+2023-05-28T00:20:09.281Z info: Server listening at Port 3000
+2023-05-28T00:20:09.443Z info: There is already data in Journey Collection
+2023-05-28T00:20:09.447Z info: There is already data in Station Collection
+2023-05-28T00:20:09.448Z info: insertData took 87.71680009365082 milliseconds.
+2023-05-28T00:22:07.730Z info: Server listening at Port 3000
+2023-05-28T00:22:08.118Z info: There is already data in Journey Collection
+2023-05-28T00:22:08.138Z info: There is already data in Station Collection
+2023-05-28T00:22:08.139Z info: insertData took 296.99699997901917 milliseconds.
+2023-05-28T00:24:28.354Z info: Server listening at Port 3000
+2023-05-28T00:24:28.522Z info: There is already data in Journey Collection
+2023-05-28T00:25:38.186Z info: Server listening at Port 3000
+2023-05-28T00:25:38.395Z info: There is already data in Journey Collection
+2023-05-28T00:25:38.942Z info: insertData took 656.6819000244141 milliseconds.
+2023-05-28T00:26:14.596Z info: Server listening at Port 3000
+2023-05-28T00:26:14.720Z info: There is already data in Journey Collection
+2023-05-28T00:26:14.723Z info: There is already data in Station Collection
+2023-05-28T00:26:14.724Z info: insertData took 65.53079998493195 milliseconds.
+2023-05-28T00:26:48.149Z info: Server listening at Port 3000
+2023-05-28T00:26:48.278Z info: There is already data in Journey Collection
+2023-05-28T00:26:48.281Z info: There is already data in Station Collection
+2023-05-28T00:26:48.282Z info: insertData took 77.81309998035431 milliseconds.
+2023-05-28T00:27:29.081Z info: Server listening at Port 3000
+2023-05-28T00:27:29.281Z info: There is already data in Journey Collection
+2023-05-28T00:28:17.115Z info: Server listening at Port 3000
+2023-05-28T00:28:17.264Z info: There is already data in Journey Collection
+2023-05-28T00:28:17.914Z info: insertData took 737.4366999864578 milliseconds.
+2023-05-28T00:28:38.322Z info: Server listening at Port 3000
+2023-05-28T00:28:38.445Z info: There is already data in Journey Collection
+2023-05-28T00:28:38.744Z info: insertData took 369.76889991760254 milliseconds.
+2023-05-28T00:30:36.706Z info: Server listening at Port 3000
+2023-05-28T00:30:36.857Z info: There is already data in Journey Collection
+2023-05-28T00:30:37.387Z info: insertData took 618.7759000062943 milliseconds.
+2023-05-28T00:31:11.141Z info: Server listening at Port 3000
+2023-05-28T00:31:11.302Z info: There is already data in Journey Collection
+2023-05-28T00:31:11.885Z info: insertData took 661.618499994278 milliseconds.
+2023-05-28T00:31:42.927Z info: Server listening at Port 3000
+2023-05-28T00:31:43.105Z info: There is already data in Journey Collection
+2023-05-28T00:31:43.109Z info: There is already data in Station Collection
+2023-05-28T00:31:43.110Z info: insertData took 107.05889999866486 milliseconds.
+2023-05-28T00:31:57.074Z info: Server listening at Port 3000
+2023-05-28T00:31:57.217Z info: There is already data in Journey Collection
+2023-05-28T00:31:57.592Z info: insertData took 457.9647001028061 milliseconds.
+2023-05-28T00:33:15.367Z info: Server listening at Port 3000
+2023-05-28T00:33:15.494Z info: There is already data in Journey Collection
+2023-05-28T00:33:15.533Z info: reading file ./data/stations/Helsingin_ja_Espoon_kaupunkipy%C3%B6r%C3%A4asemat_avoin.csv of length 457
+2023-05-28T00:33:16.059Z info: All documents inserted successfully
+2023-05-28T00:33:16.066Z info: insertData took 640.6888999938965 milliseconds.
+2023-05-28T00:34:34.587Z info: Server listening at Port 3000
+2023-05-28T00:34:34.747Z info: There is already data in Journey Collection
+2023-05-28T00:34:34.751Z info: There is already data in Station Collection
+2023-05-28T00:34:34.752Z info: insertData took 98.24269998073578 milliseconds.
+2023-05-28T00:35:02.303Z info: Server listening at Port 3000
+2023-05-28T00:35:02.434Z info: There is already data in Journey Collection
+2023-05-28T00:35:02.497Z info: reading file ./data/stations/Helsingin_ja_Espoon_kaupunkipy%C3%B6r%C3%A4asemat_avoin.csv of length 457
+2023-05-28T00:35:03.030Z info: insertData took 667.7625000476837 milliseconds.
+2023-05-28T00:37:51.626Z info: Server listening at Port 3000
+2023-05-28T00:37:51.775Z info: There is already data in Journey Collection
+2023-05-28T00:37:51.781Z info: There is already data in Station Collection
+2023-05-28T00:37:51.782Z info: insertData took 94.86220002174377 milliseconds.
+2023-05-28T00:38:09.576Z info: Server listening at Port 3000
+2023-05-28T00:38:09.780Z info: There is already data in Journey Collection
+2023-05-28T00:38:09.849Z info: reading file ./data/stations/Helsingin_ja_Espoon_kaupunkipy%C3%B6r%C3%A4asemat_avoin.csv of length 457
+2023-05-28T00:38:10.742Z info: insertData took 1065.837700009346 milliseconds.
+2023-05-28T00:39:28.574Z info: Server listening at Port 3000
+2023-05-28T00:39:28.956Z info: There is already data in Journey Collection
+2023-05-28T00:39:29.011Z info: reading file ./data/stations/Helsingin_ja_Espoon_kaupunkipy%C3%B6r%C3%A4asemat_avoin.csv of length 457
+2023-05-28T00:39:29.758Z info: Inserted Documents:
+2023-05-28T00:39:29.762Z info: insertData took 1010.5297999382019 milliseconds.
+2023-05-28T00:40:11.436Z info: Server listening at Port 3000
+2023-05-28T00:40:11.619Z info: There is already data in Journey Collection
+2023-05-28T00:40:11.680Z info: reading file ./data/stations/Helsingin_ja_Espoon_kaupunkipy%C3%B6r%C3%A4asemat_avoin.csv of length 457
+2023-05-28T00:40:12.404Z info: Inserted Documents:
+2023-05-28T00:40:12.419Z info: insertData took 902.2943999767303 milliseconds.
+2023-05-28T00:44:27.298Z info: Server listening at Port 3000
+2023-05-28T00:44:27.485Z info: There is already data in Journey Collection
+2023-05-28T00:44:27.489Z info: There is already data in Station Collection
+2023-05-28T00:44:27.490Z info: insertData took 108.91110002994537 milliseconds.
+2023-05-28T00:44:52.944Z info: Server listening at Port 3000
+2023-05-28T00:44:53.074Z info: There is already data in Journey Collection
+2023-05-28T00:44:53.121Z info: reading file ./data/stations/Helsingin_ja_Espoon_kaupunkipy%C3%B6r%C3%A4asemat_avoin.csv of length 457
+2023-05-28T00:44:53.709Z info: insertData took 711.6671999692917 milliseconds.
+2023-05-28T00:46:19.325Z info: Server listening at Port 3000
+2023-05-28T00:46:27.849Z info: reading file ./data/journeys/2021-05.csv of length 814676
+2023-05-28T00:50:24.793Z info: Server listening at Port 3000
+2023-05-28T00:50:31.970Z info: reading file ./data/journeys/2021-05.csv of length 814676
+2023-05-28T00:51:01.509Z info: Server listening at Port 3000
+2023-05-28T00:56:46.925Z info: Server listening at Port 3000
+2023-05-28T00:58:24.040Z info: Server listening at Port 3000
+2023-05-28T00:58:25.069Z info: insertData took 972.8185999393463 milliseconds.
+2023-05-28T00:58:42.804Z info: Server listening at Port 3000
+2023-05-28T01:22:31.648Z info: There is already data in Station Collection
+2023-05-28T01:22:31.651Z info: insertData took 1428774.3799999952 milliseconds.
+2023-05-28T15:45:12.258Z info: Server listening at Port 3000
+2023-05-28T15:45:12.390Z info: There is already data in Journey Collection
+2023-05-28T15:45:12.403Z info: There is already data in Station Collection
+2023-05-28T15:45:12.404Z info: insertData took 90.54139995574951 milliseconds.
+2023-05-28T19:03:44.217Z info: Server listening at Port 3000
+2023-05-28T19:03:44.417Z info: There is already data in Journey Collection
+2023-05-28T19:03:44.421Z info: There is already data in Station Collection
+2023-05-28T19:03:44.421Z info: insertData took 118.75980007648468 milliseconds.
+2023-05-28T20:08:18.334Z info: creaet
+2023-05-28T20:08:18.369Z error: Cast to Number failed for value "creaet" (type string) at path "ID" for model "Stations"
+2023-05-28T20:08:18.388Z info: creaet
+2023-05-28T20:08:18.391Z error: Cast to Number failed for value "creaet" (type string) at path "ID" for model "Stations"
+2023-05-28T20:35:03.534Z info: 505
+2023-05-28T20:35:03.544Z info: 6472a730599a8ff87a108a51
+2023-05-28T20:35:03.590Z info: 505
+2023-05-28T20:35:03.595Z info: 6472a730599a8ff87a108a51
+2023-05-28T21:02:34.933Z info: 507
+2023-05-28T21:02:34.937Z info: 6472a730599a8ff87a108a52
+2023-05-28T21:02:34.960Z info: 507
+2023-05-28T21:02:34.964Z info: 6472a730599a8ff87a108a52
+2023-05-29T01:03:11.212Z info: Server listening at Port 3000
+2023-05-29T01:04:08.605Z info: Server listening at Port 3000
+2023-05-29T01:04:14.832Z info: Server listening at Port 3000
+2023-05-29T01:06:52.863Z info: Server listening at Port 3000
+2023-05-29T01:09:37.265Z info: Server listening at Port 3000
+2023-05-29T01:20:58.182Z info: Server listening at Port 3000
+2023-05-29T01:21:32.648Z info: Server listening at Port 3000
+2023-05-29T01:21:58.405Z info: Server listening at Port 3000
+2023-05-29T01:24:52.239Z info: Server listening at Port 3000
+2023-05-29T01:25:11.358Z info: Server listening at Port 3000
+2023-05-29T01:25:45.921Z info: Server listening at Port 3000
+2023-05-29T01:26:12.081Z info: Server listening at Port 3000
+2023-05-29T01:27:36.132Z info: Server listening at Port 3000
+2023-05-29T01:28:07.882Z info: Server listening at Port 3000
+2023-05-29T18:52:00.655Z info: Server listening at Port 3000
+2023-05-29T19:14:41.123Z info: insertData took 1360408.1653000005 milliseconds.
+2023-05-29T20:54:26.222Z info: Server listening at Port 3000
+2023-05-29T20:55:16.500Z info: Server listening at Port 3000
+2023-05-29T20:55:35.339Z info: Server listening at Port 3000
+2023-05-29T20:55:35.542Z info: There is already data in Journey Collection
+2023-05-29T20:55:35.544Z info: insertData took 122.16990000009537 milliseconds.
+2023-05-29T20:55:58.510Z info: Server listening at Port 3000
+2023-05-29T20:57:07.713Z info: Server listening at Port 3000
+2023-05-29T20:57:19.142Z info: Server listening at Port 3000
+2023-05-29T20:58:52.239Z info: insertData took 93015.11400000006 milliseconds.

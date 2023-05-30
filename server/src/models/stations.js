@@ -3,20 +3,59 @@ import mongoose, { get } from "mongoose";
 const { Schema } = mongoose;
 
 const StationSchema = new Schema({
-  FID: Number,
-  ID: Number,
-  Nimi: String,
-  Namn: String,
-  Name: String,
-  Osoite: String,
-  Adress: String,
-  Kaupunki: String,
-  Stad: String,
-  Operaattor: String,
-  Kapasiteet: String,
-  x: Number,
-  y: Number,
+  FID: {
+    type: Number,
+    required: true,
+    min: [0, "FID must be a positive number"],
+  },
+  ID: {
+    type: Number,
+    required: true,
+    min: [0, "ID must be a positive number"],
+  },
+  Nimi: {
+    type: String,
+    required: true,
+  },
+  Namn: {
+    type: String,
+    required: true,
+  },
+  Name: {
+    type: String,
+    required: true,
+  },
+  Osoite: {
+    type: String,
+    required: true,
+  },
+  Adress: {
+    type: String,
+    required: true,
+  },
+  Kaupunki: {
+    type: String,
+  },
+  Stad: {
+    type: String,
+  },
+  Operaattor: {
+    type: String,
+  },
+  Kapasiteet: {
+    type: String,
+    required: true,
+  },
+  x: {
+    type: Number,
+    required: true,
+  },
+  y: {
+    type: Number,
+    required: true,
+  },
 });
+
 
 export const getStationValidator = () => {
   return {

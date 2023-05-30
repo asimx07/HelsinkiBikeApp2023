@@ -126,7 +126,6 @@ function Header() {
           >
             {pages.map((page) => (
               <Button
-                variant="elevated"
                 key={page}
                 onClick={() => handlePageClick(page)}
                 sx={{

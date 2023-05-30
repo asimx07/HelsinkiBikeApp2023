@@ -7,7 +7,7 @@ export const getAllStations = async (params) => {
     let page = params.page;
     let size = params.size;
     let Station = await getStationModel();
-    let Journey = await getJourneyModel();
+
     if (page < 1 || isNaN(page)) {
       throw new Error("Invalid page number");
     }
@@ -15,8 +15,12 @@ export const getAllStations = async (params) => {
     if (size < 1 || isNaN(size)) {
       throw new Error("Invalid page size");
     }
-
     const totalCount = await Station.estimatedDocumentCount({});
+    console.log("totalCount", totalCount);
+
+    if (size === -1) {
+      size = totalCount;
+    }
 
     const totalPages = Math.ceil(totalCount / size);
 
@@ -28,22 +32,8 @@ export const getAllStations = async (params) => {
     console.log(page, size, count);
 
     let stations = await Station.find({}).skip(count).limit(size).exec();
-    const stationObjects = stations.map((stations) => stations.toObject());
-    for (let station of stationObjects) {
-      let departureCount = await Journey.countDocuments({
-        departureStationID: station.ID,
-      });
-      console.log(station);
-      station.totalDepartureCount = departureCount;
-      let returnCount = await Journey.countDocuments({
-        returnStationId: station.ID,
-      });
-      station.totalReturnCount = returnCount;
-    }
-    return {
-      stations: stationObjects,
-      totalPages: totalPages,
-    };
+
+    return { stations: stations, totalPages: totalCount };
   } catch (err) {
     logger.error(err);
   }
@@ -51,14 +41,55 @@ export const getAllStations = async (params) => {
 
 export const getStationByID = async (params) => {
   try {
-    let id = params.id;
+    const id = params.id;
+    logger.info(id);
 
-    let Station = await getStationModel();
+    const Station = await getStationModel();
+    const Journey = await getJourneyModel();
 
-    let station = await Station.find({ ID: id }).exec();
+    const station = await Station.findOne({ ID: id }).exec();
+    logger.info(station._id);
+    const totalDepartureJourneys = await Journey.countDocuments({
+      departureStationID: station.ID,
+    }).exec();
+    const totalReturnJourneys = await Journey.countDocuments({
+      returnStationId: station.ID,
+    }).exec();
 
-    return station;
+    return {
+      stationName: station.Name,
+      stationAddress: station.Osoite,
+      stationLatitude: station.y,
+      stationLongitude: station.x,
+      totalDeparturJourneys: totalDepartureJourneys,
+      totalReturnJourneys: totalReturnJourneys,
+    };
   } catch (err) {
     logger.error(err);
+  }
+};
+
+export const createStation = async (params) => {
+  try {
+    const Station = await getStationModel();
+
+    const station = new Station(params);
+
+    const validationError = station.validateSync();
+    if (validationError) {
+      const validationErrors = {};
+      for (const key in validationError.errors) {
+        if (validationError.errors.hasOwnProperty(key)) {
+          validationErrors[key] = validationError.errors[key].message;
+        }
+      }
+      return { statusCode: 400, errors: validationErrors };
+    }
+
+    const doc = await station.save();
+    return { statusCode: 201, message: "Station Inserted Sucessfully" };
+  } catch (error) {
+    logger.error(error);
+    return { statusCode: 500, error: "Failed to save Station" };
   }
 };

@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
-import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { SingleStation } from "./component/SingleStation.tsx";
 import { JourneysList } from "./component/JourneysList";
 import { StationsList } from "./component/StationsList.tsx";
 import StationForm from "./component/CreateStation.tsx";
+import JourneyForm from "./component/CreateJourney.tsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,8 +30,8 @@ const router = createBrowserRouter([
     element: <StationForm />,
   },
   {
-    path: "404",
-    element: (<App />) as React.ReactNode,
+    path: "/journey/create",
+    element: <JourneyForm />,
   },
   {
     path: "*",

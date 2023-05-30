@@ -1,0 +1,79 @@
+version: "3.8"
+
+services:
+  mongo1:
+    hostname: mongo1
+    image: mongo:6
+    ports:
+      - 30000:27017
+    restart: always
+    command: mongod --replSet my-mongo-set
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  mongo2:
+    hostname: mongo2
+    image: mongo:6
+    ports:
+      - 30001:27017
+    restart: always
+    command: mongod --replSet my-mongo-set
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  mongo3:
+    hostname: mongo3
+    image: mongo:6
+    ports:
+      - 30002:27017
+    restart: always
+    command: mongod --replSet my-mongo-set
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  mongoinit:
+    image: mongo:6
+    restart: "no"
+    depends_on:
+      - mongo1
+      - mongo2
+      - mongo3
+    command: >
+      bash -c "sleep 10 && mongosh --host mongo1:27017 --eval '
+      db = (new Mongo(\"mongodb://mongo1:27017\")).getDB(\"test\");
+      config = {
+        \"_id\": \"my-mongo-set\",
+        \"members\": [
+          { \"_id\": 0, \"host\": \"mongo1:27017\", \"priority\": 2 },
+          { \"_id\": 1, \"host\": \"mongo2:27017\", \"priority\": 1 },
+          { \"_id\": 2, \"host\": \"mongo3:27017\", \"priority\": 1 }
+        ]
+      };
+      rs.initiate(config);
+      '"
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.server
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongoinit
+    environment:
+      - MONGO_URI=mongodb://mongo1:27017/?retryWrites=true&replicaSet=my-mongo-set
+    command: sh -c "sleep 30 && npm run start"
