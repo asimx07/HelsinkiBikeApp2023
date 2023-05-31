@@ -75,7 +75,7 @@ const JourneyForm: React.FC = () => {
                       helperText={errors.departure?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="departure" // Add data-testid attribute
+                      data-testid="departure"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -89,7 +89,7 @@ const JourneyForm: React.FC = () => {
                       helperText={errors.return?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="return" // Add data-testid attribute
+                      data-testid="return"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -107,7 +107,7 @@ const JourneyForm: React.FC = () => {
                       helperText={errors.departureStationID?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="departureStationID" // Add data-testid attribute
+                      data-testid="departureStationID"
                     />
                   </Grid>
 
@@ -155,7 +155,7 @@ const JourneyForm: React.FC = () => {
                       helperText={errors.departureStationName?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="returnStationName" // Add data-testid attribute
+                      data-testid="returnStationName"
                     />
                   </Grid>
 
@@ -174,7 +174,7 @@ const JourneyForm: React.FC = () => {
                       helperText={errors.coveredDistanceInMeters?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="coveredDistanceInMeters" // Add data-testid attribute
+                      data-testid="coveredDistanceInMeters"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -192,7 +192,7 @@ const JourneyForm: React.FC = () => {
                       helperText={errors.durationInSeconds?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="durationInSeconds" // Add data-testid attribute
+                      data-testid="durationInSeconds"
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -201,7 +201,7 @@ const JourneyForm: React.FC = () => {
                       variant="contained"
                       color="primary"
                       fullWidth
-                      data-testid="submit-btn" // Add data-testid attribute
+                      data-testid="submit-btn"
                     >
                       Submit
                     </Button>

@@ -14,6 +14,7 @@ import {
   IconButton,
   Button,
 } from "@mui/material";
+import LoadingSpinner from "./CircularProgress";
 import { ArrowUpward, ArrowDownward } from "@mui/icons-material";
 import { styles } from "../styles/tableStyles";
 import { useJourneysList } from "../hooks/useJourneys";
@@ -65,6 +66,7 @@ export const JourneysList = () => {
     totalPages,
     pageSize,
     error,
+    loading,
     handleSort,
     sortedJourneys,
     handlePageSizeChange,
@@ -90,6 +92,19 @@ export const JourneysList = () => {
     return null;
   };
 
+  if (loading) {
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      <LoadingSpinner />
+    </div>;
+  }
+
   if (error) {
     return (
       <>
@@ -105,11 +120,11 @@ export const JourneysList = () => {
             }}
           >
             <Typography
-              variant="h2"
+              variant="h4"
               align="center"
               style={{ color: "#fff", padding: "50px" }}
             >
-              Oops :( something is broken. Please return to Home.
+              Oops :( something is broken. Please return to <a href="/">Home</a>
             </Typography>
           </Paper>
         </Container>

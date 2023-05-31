@@ -52,7 +52,7 @@ const styles = {
       "& fieldset": {
         borderColor: "#FFFFFF",
         borderWidth: 1,
-        opacity: 1, // Adjust the opacity value as needed
+        opacity: 1,
       },
       "&:hover fieldset": {
         borderColor: "#FFFFFF",
@@ -61,7 +61,7 @@ const styles = {
         borderColor: "#FFFFFF",
       },
       "&.MuiAutocomplete-hasPopupIcon .MuiOutlinedInput-input": {
-        padding: "10px 26px 10px 12px", // Adjust the padding as needed
+        padding: "10px 26px 10px 12px",
       },
     },
   },

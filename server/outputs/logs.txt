@@ -106,3 +106,80 @@
 2023-05-31T01:32:24.098Z info: 64768f0a64df1aed21453cce
 2023-05-31T01:32:24.137Z info: 523
 2023-05-31T01:32:24.143Z info: 64768f0a64df1aed21453cce
+2023-05-31T14:57:43.863Z info: Server listening at Port 3000
+2023-05-31T14:58:04.508Z info: 64768f0a64df1aed21453cc4
+2023-05-31T14:58:09.622Z info: 64768f0a64df1aed21453dcf
+2023-05-31T15:08:30.311Z info: Server listening at Port 3000
+2023-05-31T15:08:31.999Z info: 64768f0a64df1aed21453dcf
+2023-05-31T15:08:35.668Z info: [object Object],[object Object],[object Object],[object Object],[object Object]
+2023-05-31T15:08:35.669Z error: totalDepartureJourneys is not defined
+2023-05-31T15:09:35.286Z info: Server listening at Port 3000
+2023-05-31T15:09:36.186Z info: 64768f0a64df1aed21453dcf
+2023-05-31T15:09:36.247Z info: [{"count":376,"avgDistance":0,"returnStationID":"401"},{"count":222,"avgDistance":0,"returnStationID":"505"},{"count":164,"avgDistance":0,"returnStationID":"055"},{"count":160,"avgDistance":0,"returnStationID":"057"},{"count":160,"avgDistance":0,"returnStationID":"030"}]
+2023-05-31T15:09:36.249Z error: totalDepartureJourneys is not defined
+2023-05-31T15:12:07.913Z info: Server listening at Port 3000
+2023-05-31T15:12:53.942Z info: Server listening at Port 3000
+2023-05-31T15:12:59.478Z info: 64768f0a64df1aed21453dcf
+2023-05-31T15:12:59.557Z info: [{"avgDistance":0}]
+2023-05-31T15:12:59.558Z info: [{"count":376,"returnStationID":"401"},{"count":222,"returnStationID":"505"},{"count":164,"returnStationID":"055"},{"count":160,"returnStationID":"057"},{"count":160,"returnStationID":"030"}]
+2023-05-31T15:12:59.560Z error: totalDepartureJourneys is not defined
+2023-05-31T15:14:19.504Z info: Server listening at Port 3000
+2023-05-31T15:14:20.722Z info: 64768f0a64df1aed21453dcf
+2023-05-31T15:14:20.801Z info: [{"avgDistance":0}]
+2023-05-31T15:14:20.802Z info: [{"count":376,"returnStationID":"401"},{"count":222,"returnStationID":"505"},{"count":164,"returnStationID":"055"},{"count":160,"returnStationID":"057"},{"count":160,"returnStationID":"030"}]
+2023-05-31T15:14:20.803Z error: totalDepartureJourneys is not defined
+2023-05-31T15:14:33.577Z info: Server listening at Port 3000
+2023-05-31T15:14:35.230Z info: 64768f0a64df1aed21453dcf
+2023-05-31T15:14:35.331Z info: [{"avgDistance":0}]
+2023-05-31T15:14:35.332Z info: [{"count":376,"returnStationID":"401"},{"count":222,"returnStationID":"505"},{"count":164,"returnStationID":"055"},{"count":160,"returnStationID":"030"},{"count":160,"returnStationID":"057"}]
+2023-05-31T15:14:35.333Z error: totalDepartureJourneys is not defined
+2023-05-31T15:14:46.519Z info: Server listening at Port 3000
+2023-05-31T15:16:50.215Z info: Server listening at Port 3000
+2023-05-31T15:16:50.608Z info: 64768f0a64df1aed21453dcf
+2023-05-31T15:16:54.081Z info: 64768f0a64df1aed21453dcf
+2023-05-31T15:17:42.760Z info: Server listening at Port 3000
+2023-05-31T15:17:44.077Z info: 64768f0a64df1aed21453dcf
+2023-05-31T15:18:39.861Z info: Server listening at Port 3000
+2023-05-31T15:19:56.815Z info: Server listening at Port 3000
+2023-05-31T15:20:43.995Z info: Server listening at Port 3000
+2023-05-31T15:22:07.153Z info: Server listening at Port 3000
+2023-05-31T15:24:53.455Z info: Server listening at Port 3000
+2023-05-31T15:24:58.745Z error: totalDistance is not defined
+2023-05-31T15:25:33.317Z info: Server listening at Port 3000
+2023-05-31T15:25:36.035Z error: totalDistance is not defined
+2023-05-31T15:26:16.046Z info: Server listening at Port 3000
+2023-05-31T15:27:24.959Z info: Server listening at Port 3000
+2023-05-31T15:28:00.807Z info: Server listening at Port 3000
+2023-05-31T15:28:03.740Z info: Server listening at Port 3000
+2023-05-31T15:28:20.276Z info: Server listening at Port 3000
+2023-05-31T15:29:29.606Z info: Server listening at Port 3000
+2023-05-31T15:35:14.648Z info: Server listening at Port 3000
+2023-05-31T15:36:26.125Z info: Server listening at Port 3000
+2023-05-31T15:37:53.127Z info: Server listening at Port 3000
+2023-05-31T15:37:53.931Z error: departurePipeline is not defined
+2023-05-31T15:38:06.506Z info: Server listening at Port 3000
+2023-05-31T15:38:09.907Z error: returnStationResult is not defined
+2023-05-31T15:38:32.604Z info: Server listening at Port 3000
+2023-05-31T15:38:42.315Z info: Server listening at Port 3000
+2023-05-31T15:39:22.880Z info: Server listening at Port 3000
+2023-05-31T15:39:58.881Z info: Server listening at Port 3000
+2023-05-31T15:45:56.551Z info: Server listening at Port 3000
+2023-05-31T15:46:09.002Z info: Server listening at Port 3000
+2023-05-31T15:47:31.853Z info: Server listening at Port 3000
+2023-05-31T15:47:33.734Z error: departureStationResult is not defined
+2023-05-31T15:47:42.312Z info: Server listening at Port 3000
+2023-05-31T15:50:02.001Z info: Server listening at Port 3000
+2023-05-31T15:50:04.577Z error: Cannot read properties of undefined (reading 'name')
+2023-05-31T15:50:22.848Z info: Server listening at Port 3000
+2023-05-31T15:50:49.624Z info: Server listening at Port 3000
+2023-05-31T15:50:50.435Z error: topFivedepartureStations is not defined
+2023-05-31T15:51:16.489Z info: Server listening at Port 3000
+2023-05-31T15:51:18.325Z error: topFiveDepartureStations is not defined
+2023-05-31T15:51:54.880Z info: Server listening at Port 3000
+2023-05-31T15:51:55.585Z error: topFiveDepartureStations is not defined
+2023-05-31T15:52:47.535Z info: Server listening at Port 3000
+2023-05-31T15:52:49.438Z error: topFiveDeparture is not defined
+2023-05-31T15:53:15.530Z info: Server listening at Port 3000
+2023-05-31T15:53:32.212Z info: Server listening at Port 3000
+2023-05-31T15:53:46.288Z info: Server listening at Port 3000
+2023-05-31T16:29:37.306Z info: Server listening at Port 3000

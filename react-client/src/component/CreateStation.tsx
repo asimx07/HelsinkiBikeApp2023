@@ -84,7 +84,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.FID?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="FID" // Add data-testid attribute
+                      data-testid="FID"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -102,7 +102,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.ID?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="ID" // Add data-testid attribute
+                      data-testid="ID"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -114,7 +114,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.Nimi?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="Nimi" // Add data-testid attribute
+                      data-testid="Nimi"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -126,7 +126,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.Namn?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="Namn" // Add data-testid attribute
+                      data-testid="Namn"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -138,7 +138,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.Name?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="Name" // Add data-testid attribute
+                      data-testid="Name"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -152,7 +152,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.Osoite?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="Osoite" // Add data-testid attribute
+                      data-testid="Osoite"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -166,7 +166,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.Adress?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="Adress" // Add data-testid attribute
+                      data-testid="Adress"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -180,7 +180,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.Kaupunki?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="Kaupunki" // Add data-testid attribute
+                      data-testid="Kaupunki"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -192,7 +192,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.Stad?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="Stad" // Add data-testid attribute
+                      data-testid="Stad"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -206,7 +206,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.Operaattor?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="Operaattor" // Add data-testid attribute
+                      data-testid="Operaattor"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -220,7 +220,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.Kapasiteet?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="Kapasiteet" // Add data-testid attribute
+                      data-testid="Kapasiteet"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -238,7 +238,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.x?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="x" // Add data-testid attribute
+                      data-testid="x"
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -256,7 +256,7 @@ const StationForm: React.FC = () => {
                       helperText={errors.y?.message}
                       sx={styles.textField}
                       autoComplete="off"
-                      data-testid="y" // Add data-testid attribute
+                      data-testid="y"
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -265,7 +265,7 @@ const StationForm: React.FC = () => {
                       variant="contained"
                       color="primary"
                       fullWidth
-                      data-testid="submit-btn" // Add data-testid attribute
+                      data-testid="submit-btn"
                     >
                       Submit
                     </Button>

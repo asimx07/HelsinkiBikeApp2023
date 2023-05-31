@@ -9,7 +9,7 @@ export const useJourneysList = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [pageSize, setPageSize] = useState(10);
   const [error, setError] = useState<string | null>(null);
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function fetchJourneys() {
       try {
@@ -29,10 +29,11 @@ export const useJourneysList = () => {
         setTotalPages(totalPagesCount);
         setJourneys(newJourneys);
         setError(null);
-        console.log(newJourneys);
       } catch (error) {
         console.error("Error fetching journeys:", error);
         setError("Failed to fetch journeys");
+      } finally {
+        setLoading(false);
       }
     }
 
@@ -88,6 +89,7 @@ export const useJourneysList = () => {
     totalPages,
     pageSize,
     error,
+    loading,
     handleSort,
     sortedJourneys,
     handlePageSizeChange,

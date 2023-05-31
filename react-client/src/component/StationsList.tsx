@@ -19,7 +19,7 @@ import {
 import { ArrowUpward, ArrowDownward } from "@mui/icons-material";
 import { useStationsList } from "../hooks/useStations.ts";
 import { useNavigate } from "react-router-dom";
-
+import LoadingSpinner from "./CircularProgress.tsx";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 
 const APP_URL = import.meta.env.VITE_PUBLIC_URL;
@@ -73,6 +73,7 @@ export const StationsList = () => {
     totalPages,
     pageSize,
     error,
+    loading,
     handleSort,
     sortedStations,
     handlePageSizeChange,
@@ -83,12 +84,10 @@ export const StationsList = () => {
   };
 
   const renderSortIcon = (columnId: string) => {
-    // Check if the column is sortable
     const sortableColumn = columns.find(
       (column) => column.id === columnId && column.sortable
     );
     if (sortableColumn) {
-      // Render the sort icon based on the sort direction
       return sortDirection === "asc" ? (
         <ArrowUpward fontSize="small" />
       ) : (
@@ -98,6 +97,19 @@ export const StationsList = () => {
 
     return null;
   };
+  if (loading) {
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      <LoadingSpinner />
+    </div>;
+  }
+
   if (error) {
     return (
       <>
@@ -113,12 +125,12 @@ export const StationsList = () => {
             }}
           >
             <Typography
-              variant="h5"
+              variant="h4"
               align="center"
               style={{ color: "#fff", padding: "50px" }}
-              data-testid="error-message" // Added test ID for error message
+              data-testid="error-message"
             >
-              Oops :( something is broken. Please Return to Home
+              Oops :( something is broken. Please return to <a href="/">Home</a>
             </Typography>
           </Paper>
         </Container>
@@ -142,7 +154,7 @@ export const StationsList = () => {
               marginTop: "5px",
             }}
             onClick={handleAddStation}
-            data-testid="add-station-button" // Added test ID for add station button container
+            data-testid="add-station-button"
           >
             <IconButton>
               <AddCircleOutlineOutlinedIcon
@@ -166,7 +178,7 @@ export const StationsList = () => {
                         ...styles.tableCell,
                       }}
                       onClick={() => column.sortable && handleSort(column.id)}
-                      data-testid={`column-header-${column.id}`} // Added test ID for column headers
+                      data-testid={`column-header-${column.id}`}
                     >
                       {column.label}
                       {column.sortable && (
@@ -191,7 +203,7 @@ export const StationsList = () => {
                     key={row._id}
                     component={Link}
                     to={`${APP_URL}/station/${row.ID}`}
-                    data-testid={`row-${row._id}`} // Added test ID for table rows
+                    data-testid={`row-${row._id}`}
                   >
                     {columns.map((column) => {
                       const value = row[column.id];
@@ -200,7 +212,7 @@ export const StationsList = () => {
                           key={column.id}
                           align={column.align}
                           sx={styles.tableCellText}
-                          data-testid={`cell-${column.id}-${row._id}`} // Added test ID for table cells
+                          data-testid={`cell-${column.id}-${row._id}`}
                         >
                           {column.format && typeof value === "number"
                             ? column.format(value)

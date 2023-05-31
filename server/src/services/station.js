@@ -42,27 +42,118 @@ export const getAllStations = async (params) => {
 export const getStationByID = async (params) => {
   try {
     const id = params.id.toString();
-    logger.info(id);
+    
 
     const Station = await getStationModel();
     const Journey = await getJourneyModel();
+    let totalDistance = 0;
 
-    const station = await Station.findOne({ ID: 4 }).exec();
-    logger.info(station._id);
-    const totalDepartureJourneys = await Journey.countDocuments({
+    const station = await Station.findOne({ ID: id }).exec();
+
+    //Departure Calculations
+
+    const totalDepartureJourneys = await Journey.find({
       departureStationID: station.ID,
     }).exec();
-    const totalReturnJourneys = await Journey.countDocuments({
+
+    totalDepartureJourneys.forEach((journey) => {
+      totalDistance += journey.coveredDistanceInMeters;
+    });
+
+    const avgDepartureDistance =
+      totalDistance / totalDepartureJourneys.length / 1000;
+
+    const departurePipeline = [
+      {
+        $match: {
+          returnStationId: "501",
+        },
+      },
+      {
+        $group: {
+          _id: "$departureStationName",
+          count: { $sum: 1 },
+        },
+      },
+      {
+        $sort: {
+          count: -1,
+        },
+      },
+      {
+        $limit: 5,
+      },
+      {
+        $project: {
+          _id: 0,
+          departureStationName: "$_id",
+        },
+      },
+    ];
+
+    const departureStationsResult = await Journey.aggregate(
+      departurePipeline
+    ).exec();
+
+    const topFiveDeparture = departureStationsResult.map(
+      (result) => result.departureStationName
+    );
+
+    //Return Calculations
+
+    const totalReturnJourneys = await Journey.find({
       returnStationId: station.ID,
     }).exec();
+
+    totalReturnJourneys.forEach((journey) => {
+      totalDistance += journey.coveredDistanceInMeters;
+    });
+    const avgReturnDistance = totalDistance / totalReturnJourneys.length / 1000;
+
+    const returnPipeline = [
+      {
+        $match: {
+          departureStationID: station.ID,
+        },
+      },
+      {
+        $group: {
+          _id: "$returnStationName",
+          count: { $sum: 1 },
+        },
+      },
+      {
+        $sort: {
+          count: -1,
+        },
+      },
+      {
+        $limit: 5,
+      },
+      {
+        $project: {
+          _id: 0,
+          returnStationName: "$_id",
+        },
+      },
+    ];
+    const returnStationsResult = await Journey.aggregate(returnPipeline).exec();
+
+    const topFiveReturn = returnStationsResult.map(
+      (result) => result.returnStationName
+    );
 
     return {
       stationName: station.Name,
       stationAddress: station.Osoite,
       stationLatitude: station.y,
       stationLongitude: station.x,
-      totalDeparturJourneys: totalDepartureJourneys,
-      totalReturnJourneys: totalReturnJourneys,
+      totalDepartureJourneys: totalDepartureJourneys.length,
+      totalReturnJourneys: totalReturnJourneys.length,
+      avgDepartureDistance: avgDepartureDistance,
+      avgReturnDistance: avgReturnDistance,
+      topFiveDepartureStations: topFiveDeparture,
+      topFiveReturnStations: topFiveReturn,
     };
   } catch (err) {
     logger.error(err);

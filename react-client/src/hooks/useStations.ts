@@ -9,6 +9,7 @@ export const useStationsList = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [pageSize, setPageSize] = useState(10);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchStations() {
@@ -32,6 +33,8 @@ export const useStationsList = () => {
       } catch (error) {
         console.error("Error fetching stations:", error);
         setError("Failed to fetch stations");
+      } finally {
+        setLoading(false);
       }
     }
 
@@ -87,6 +90,7 @@ export const useStationsList = () => {
     totalPages,
     pageSize,
     error,
+    loading,
     handleSort,
     sortedStations,
     handlePageSizeChange,

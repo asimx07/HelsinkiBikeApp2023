@@ -14,7 +14,6 @@ export const useSingleStation = () => {
         const response = await getStationByID(id);
         const stationData = await response.json();
         setStation(stationData);
-        console.log(stationData);
       } catch (err) {
         setError("Failed to fetch station data.");
       } finally {
