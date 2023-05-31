@@ -2,6 +2,13 @@
 
 Helsinki Bike App is a pre-assignment project for Solita Dev Academy. For more information and requirement visit [Solita Dev Academy Github](https://github.com/solita/dev-academy-2023-exercise)
 
+
+
+<img src="react-client/png/LandingPage.PNG"  title="langingPage1">
+
+<img src="react-client/png/LandingPage2.PNG"  title="langingPage2">
+
+
 # Techstack
 ### Backend
 - NodeJs
@@ -49,6 +56,8 @@ Backend will run on *localhost:3000*
 Frontend will run on *localhost:5000*  
 
 by default. Changes can be made in *docker-compose.yml* file. 
+
+### Note: You can disable mongo-import configuration from docker-compose.yml file if you wish **NOT** to import data again once it is already imported. Make sure you also change depends on from mongo-import to mongo in backend and frontend configurations.
 
 ## Tests
 
@@ -101,6 +110,9 @@ This application can be run locally by setting up environment and adding depende
    - Journeys with duration less than 10 seconds and Journeys with covered distance less than 10 meters are not imported 
 
 2. Journey List
+
+<img src="react-client/png/JourneyListPNG.PNG"  title="JourneyList">
+
    - List All Journeys with departure and return stations, covered distance in kilometers and duration in minutes
     - Pagination 
     - Ordering by ascending or descending columns.
@@ -109,10 +121,21 @@ This application can be run locally by setting up environment and adding depende
    - Form Validation
    - Redirection
  
+<img src="react-client/png/JourneyForm.PNG"  title="JourneyForm">
+ 
 4. Station List 
    - List all the stations 
    - Pagination 
    - Ordering by ascending or decending columns.
+
+<img src="react-client/png/StationList.PNG"  title="StationList">
+
+5. Add Station
+  - Form Validate
+  - Redirection
+  
+<img src="react-client/png/StationForm.PNG"  title="StationForm">
+  
  
 5. Single Station List
    - Listing Station Name, Address, Total number of journeys ending and starting from that station
@@ -121,6 +144,9 @@ This application can be run locally by setting up environment and adding depende
    - The average distance of a journey ending at the station
    - Top 5 most popular return stations for journeys starting from the station
    - Top 5 most popular departure stations for journeys ending at the station
+  
+<img src="react-client/png/SingleStation.PNG"  title="SingleStation">
+
  
 ## Additional Features
 
