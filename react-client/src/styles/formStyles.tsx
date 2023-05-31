@@ -1,12 +1,10 @@
-const APP_URL = import.meta.env.VITE_PUBLIC_URL;
-
 const styles = {
   paper: {
     overflow: "hidden",
     backgroundColor: "#0000006e",
     justifyContent: "center",
     alignItems: "center",
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${APP_URL}/src/assets/bg.jpg)`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${"/src/assets/bg.jpg"})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "top-right",

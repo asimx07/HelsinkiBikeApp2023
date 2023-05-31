@@ -22,7 +22,6 @@ import { useNavigate } from "react-router-dom";
 import LoadingSpinner from "./CircularProgress.tsx";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 
-const APP_URL = import.meta.env.VITE_PUBLIC_URL;
 
 interface Column {
   id: "ID" | "Name" | "Adress" | "Kaupunki" | "Operaattor" | "Kapasiteet";
@@ -202,7 +201,7 @@ export const StationsList = () => {
                     tabIndex={-1}
                     key={row._id}
                     component={Link}
-                    to={`${APP_URL}/station/${row.ID}`}
+                    to={`/station/${row.ID}`}
                     data-testid={`row-${row._id}`}
                   >
                     {columns.map((column) => {
@@ -237,13 +236,6 @@ export const StationsList = () => {
               setCurrentPage(newPage + 1)
             }
             onRowsPerPageChange={handlePageSizeChange}
-            ActionsComponent={() => (
-              <IconButton onClick={handleAddStation}>
-                <AddCircleOutlineOutlinedIcon
-                  sx={{ color: "#fff", fontSize: "2rem" }}
-                />
-              </IconButton>
-            )}
           />
         </Paper>
       </Container>

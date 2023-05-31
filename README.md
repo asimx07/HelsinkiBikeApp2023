@@ -52,14 +52,13 @@ by default. Changes can be made in *docker-compose.yml* file.
 
 ## Tests
 
-Tests can be run in frontend by 
+Tests can be run in frontend folder *./react-client*
 
-`npm test`
+`npm test`  
 
 # Running Locally
 
 This application can be run locally by setting up environment and adding dependencies. 
-
 
 - Setup mongodb server [Setting up MongoDb server Locally](https://www.mongodb.com/docs/manual/administration/install-community/)
 - Data is being imported through *MongoImport*. [Install mongoimport](https://www.mongodb.com/docs/database-tools/mongoimport/) and set environment path
@@ -71,9 +70,9 @@ This application can be run locally by setting up environment and adding depende
 
   -`cd ./server/`
   
-  - create .env like provided example.env in *./server* 
+  - create .env like provided example.env in *./server* or you can simply rename the example.env to *.env* 
 
-  -Run `npm install`
+  -Run `npm install` **Note: Node 16 or latest is required.**
 
   -Run `node ./scripts/import.js` and wait for import.js script to finish importing all the data
 
@@ -118,6 +117,10 @@ This application can be run locally by setting up environment and adding depende
 5. Single Station List
    - Listing Station Name, Address, Total number of journeys ending and starting from that station
    - Map View 
+   - The average distance of a journey starting from the station
+   - The average distance of a journey ending at the station
+   - Top 5 most popular return stations for journeys starting from the station
+   - Top 5 most popular departure stations for journeys ending at the station
  
 ## Additional Features
 

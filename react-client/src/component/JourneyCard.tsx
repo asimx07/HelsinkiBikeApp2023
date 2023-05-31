@@ -4,7 +4,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-const APP_URL = import.meta.env.VITE_PUBLIC_URL;
 
 export default function JourneyCard() {
   const navigate = useNavigate();
@@ -25,7 +24,7 @@ export default function JourneyCard() {
         <CardMedia
           component="img"
           height="400"
-          image={APP_URL + "/assets/bike.jpg"}
+          image={"/assets/bike.jpg"}
           alt="bike"
         />
         <CardContent>

@@ -195,7 +195,6 @@ export const JourneysList = () => {
                     tabIndex={-1}
                     key={row._id}
                     data-testid={`row-${row._id}`}
-                    onClick={() => navigate(`/journey/${row._id}`)}
                   >
                     {columns.map((column) => {
                       const value = row[column.id];
