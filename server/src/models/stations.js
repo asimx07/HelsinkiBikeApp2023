@@ -4,12 +4,12 @@ const { Schema } = mongoose;
 
 const StationSchema = new Schema({
   FID: {
-    type: Number,
+    type: String,
     required: true,
     min: [0, "FID must be a positive number"],
   },
   ID: {
-    type: Number,
+    type: String,
     required: true,
     min: [0, "ID must be a positive number"],
   },

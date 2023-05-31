@@ -41,13 +41,13 @@ export const getAllStations = async (params) => {
 
 export const getStationByID = async (params) => {
   try {
-    const id = params.id;
+    const id = params.id.toString();
     logger.info(id);
 
     const Station = await getStationModel();
     const Journey = await getJourneyModel();
 
-    const station = await Station.findOne({ ID: id }).exec();
+    const station = await Station.findOne({ ID: 4 }).exec();
     logger.info(station._id);
     const totalDepartureJourneys = await Journey.countDocuments({
       departureStationID: station.ID,

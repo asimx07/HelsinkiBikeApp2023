@@ -1,6 +1,6 @@
 describe("StationForm", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:5173/station/create");
+    cy.visit("http://localhost:5000/station/create");
   });
 
   it("should submit the form with mock data", () => {

@@ -14,6 +14,7 @@ import {
   Typography,
   CssBaseline,
   IconButton,
+  Button,
 } from "@mui/material";
 import { ArrowUpward, ArrowDownward } from "@mui/icons-material";
 import { useStationsList } from "../hooks/useStations.ts";
@@ -115,6 +116,7 @@ export const StationsList = () => {
               variant="h5"
               align="center"
               style={{ color: "#fff", padding: "50px" }}
+              data-testid="error-message" // Added test ID for error message
             >
               Oops :( something is broken. Please Return to Home
             </Typography>
@@ -131,6 +133,26 @@ export const StationsList = () => {
         <Header />
 
         <Paper sx={styles.paper}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: "5px",
+              marginTop: "5px",
+            }}
+            onClick={handleAddStation}
+            data-testid="add-station-button" // Added test ID for add station button container
+          >
+            <IconButton>
+              <AddCircleOutlineOutlinedIcon
+                sx={{ color: "#fff", fontSize: "2rem" }}
+              />
+            </IconButton>
+            <Button sx={{ color: "#fff", fontSize: "1.5rem" }}>
+              Add Station
+            </Button>
+          </div>
           <TableContainer sx={styles.tableContainer}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
@@ -144,6 +166,7 @@ export const StationsList = () => {
                         ...styles.tableCell,
                       }}
                       onClick={() => column.sortable && handleSort(column.id)}
+                      data-testid={`column-header-${column.id}`} // Added test ID for column headers
                     >
                       {column.label}
                       {column.sortable && (
@@ -168,6 +191,7 @@ export const StationsList = () => {
                     key={row._id}
                     component={Link}
                     to={`${APP_URL}/station/${row.ID}`}
+                    data-testid={`row-${row._id}`} // Added test ID for table rows
                   >
                     {columns.map((column) => {
                       const value = row[column.id];
@@ -176,6 +200,7 @@ export const StationsList = () => {
                           key={column.id}
                           align={column.align}
                           sx={styles.tableCellText}
+                          data-testid={`cell-${column.id}-${row._id}`} // Added test ID for table cells
                         >
                           {column.format && typeof value === "number"
                             ? column.format(value)

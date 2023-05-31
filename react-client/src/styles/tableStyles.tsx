@@ -36,7 +36,7 @@ export const styles = {
     backgroundColor: "#0000006e",
   },
   tableContainer: {
-    maxHeight: 450,
+    maxHeight: 400,
     display: "flex",
   },
   tableFooter: {

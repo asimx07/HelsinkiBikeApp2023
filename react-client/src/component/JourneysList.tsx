@@ -12,12 +12,14 @@ import {
   Typography,
   CssBaseline,
   IconButton,
+  Button,
 } from "@mui/material";
 import { ArrowUpward, ArrowDownward } from "@mui/icons-material";
 import { styles } from "../styles/tableStyles";
 import { useJourneysList } from "../hooks/useJourneys";
 import { useNavigate } from "react-router-dom";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
+
 interface Column {
   id:
     | "departureStationName"
@@ -68,9 +70,11 @@ export const JourneysList = () => {
     handlePageSizeChange,
     setCurrentPage,
   } = useJourneysList();
+
   const handleAddJourney = () => {
     navigate("/journey/create");
   };
+
   const renderSortIcon = (columnId: string) => {
     const sortableColumn = columns.find(
       (column) => column.id === columnId && column.sortable
@@ -112,14 +116,33 @@ export const JourneysList = () => {
       </>
     );
   }
+
   return (
     <>
       <CssBaseline />
-
       <Container sx={styles.root}>
         <Header />
-
         <Paper sx={styles.paper}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: "5px",
+              marginTop: "5px",
+            }}
+            onClick={handleAddJourney}
+          >
+            <IconButton>
+              <AddCircleOutlineOutlinedIcon
+                sx={{ color: "#fff", fontSize: "2rem" }}
+                data-testid="add-journey-button"
+              />
+            </IconButton>
+            <Button sx={{ color: "#fff", fontSize: "1.5rem" }}>
+              Add Journey
+            </Button>
+          </div>
           <TableContainer sx={styles.tableContainer}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
@@ -133,6 +156,7 @@ export const JourneysList = () => {
                         ...styles.tableCell,
                       }}
                       onClick={() => column.sortable && handleSort(column.id)}
+                      data-testid={`column-header-${column.id}`}
                     >
                       {column.label}
                       {column.sortable && (
@@ -150,7 +174,14 @@ export const JourneysList = () => {
               </TableHead>
               <TableBody>
                 {sortedJourneys.map((row) => (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={row._id}>
+                  <TableRow
+                    hover
+                    role="checkbox"
+                    tabIndex={-1}
+                    key={row._id}
+                    data-testid={`row-${row._id}`}
+                    onClick={() => navigate(`/journey/${row._id}`)}
+                  >
                     {columns.map((column) => {
                       const value = row[column.id];
                       return (
@@ -182,13 +213,6 @@ export const JourneysList = () => {
               setCurrentPage(newPage + 1)
             }
             onRowsPerPageChange={handlePageSizeChange}
-            ActionsComponent={() => (
-              <IconButton onClick={handleAddJourney}>
-                <AddCircleOutlineOutlinedIcon
-                  sx={{ color: "#fff", fontSize: "2rem" }}
-                />
-              </IconButton>
-            )}
           />
         </Paper>
       </Container>

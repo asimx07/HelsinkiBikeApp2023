@@ -18,7 +18,7 @@ const JourneySchema = new Schema({
     },
   },
   departureStationID: {
-    type: Number,
+    type: String,
     required: true,
     min: [0, "Departure station ID must be a positive number"],
     index: true,
@@ -28,7 +28,7 @@ const JourneySchema = new Schema({
     required: true,
   },
   returnStationId: {
-    type: Number,
+    type: String,
     required: true,
     min: [0, "Return station ID must be a positive number"],
     index: true,

@@ -1,5 +1,6 @@
 import csv from "csvtojson";
 import fs from "fs";
+import path from "path";
 export const getCsvToJson = async (filepath, collection) => {
   if (collection === "journeys") {
     return csv({
@@ -41,5 +42,5 @@ export const getCsvToJson = async (filepath, collection) => {
 };
 
 export const getFilesFromDirectory = (dirName) => {
-  return fs.readdirSync(dirName).map((file) => dirName + "/" + file);
+  return fs.readdirSync(dirName).map((file) => path.join(dirName, file));
 };

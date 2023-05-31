@@ -46,7 +46,10 @@ function App() {
               Helsinki Bike App
             </Typography>
             <IconButton onClick={handleScrollDown}>
-              <ExpandMoreIcon style={styles.expandMoreButton} />
+              <ExpandMoreIcon
+                style={styles.expandMoreButton}
+                data-testid="expand-more-btn"
+              />
             </IconButton>
           </Container>
         </Collapse>

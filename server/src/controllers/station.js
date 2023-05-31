@@ -17,6 +17,7 @@ export const getAllStations = async (req, res) => {
 
 export const getStationByID = async (req, res) => {
   try {
+    console.log(req.params.id);
     let station = await StationService.getStationByID({
       id: req.params.id,
     });
