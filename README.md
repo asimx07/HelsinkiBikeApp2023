@@ -1,6 +1,5 @@
 # **HELSINKI BIKE APP**
 
-Helsinki Bike App is a pre-assignment project for Solita Dev Academy. For more information and requirement visit [Solita Dev Academy Github](https://github.com/solita/dev-academy-2023-exercise)
 
 
 
